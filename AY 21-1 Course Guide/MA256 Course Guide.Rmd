@@ -1,6 +1,7 @@
 ---
 title: "MA256 Course Guide"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -11,7 +12,7 @@ knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 ```
 
 ## Task
-Create critical statistical thinkers who can develop precise research questions; identify, collect, and analyze relevant data; and translate this analysis to a complete and correct response that answers the original question.
+Develop critical statistical thinkers who can generate precise research questions; identify, collect, and analyze relevant data; and translate this analysis to a complete and correct response that answers the original question.
 
 ## Purpose
 Our daily lives are full of question whose answers should be informed by the growing amount of data surrounding us. Politicians, scientists, sports teams, and military leaders are all looking toward quantitative analysis to provide them with unbiased information with which to make the correct decision. In this course you will gain valuable experience using data in an investigation process to collect, analyze, and report your results to help answer relevant research questions.
