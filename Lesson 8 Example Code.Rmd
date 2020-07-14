@@ -42,3 +42,10 @@ upper = sample_stat + qt(0.975, df = sample_size - 1) *
 paste("(",lower, ",", upper, ")")
 ```
 I want to stress taking a moment at this point and asking yourself: "Does this make sense as a range of plausible values for my parameter?" I, of course, never make a msitaek in coding but you just might and so it helps to examine your answer as a check. Is it plausible, given what we know (our sample), that we can be 95% confident that the population average time estimate is between 11.5 and 16.0 seconds? I think it is and therefore I can be fairly comfortable that I've accurately calculated this CI. It's not a definitive check but it just might save you from making a silly mistake.
+
+You may recall seeing a very similar CI supplied by our **t.test()** fuction last lesson. Try to control your excitement but *R* will calculate a CI for whatever confidence level your want using this function. Another way to check your answer!
+```{r}
+null_mean = 10
+
+t.test(estimates, mu = null_mean, alternative = "two.sided", conf.level = 0.95)
+```

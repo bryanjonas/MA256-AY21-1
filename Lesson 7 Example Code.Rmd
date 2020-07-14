@@ -8,7 +8,6 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center") 
 ```
 
-# Example Code:
 **Simulation-based Approach:**
 
 I always tell my students that, at the end of this discussion, you feel like we've done something sketchy then you probably grasp the concepts. Rest assured that, however sketchy it may feel, what we are about to do is grounded in solid statistics. For this example I'm going to use the data available on the book's website for the "Time Estimate" problem.  It doesn't match the exact data in the textbook (for some reason) but it'll work for this example.
@@ -82,6 +81,7 @@ replications_dataframe %>%
 ```
 
 **One-sample T-test**
+
 I'm going to first show you a method that will, hopefully, help you understand calculating the p-value... and then I'm going to show you the 
 easy way. We'll continue with the same example and check our validity conditions.
 
@@ -95,7 +95,7 @@ estimates %>%
   labs(x = "Time", y = "Count", title = "Distribution of Original Sample") +
   geom_histogram()
 ```
-A question you're going to ask again and again is "how skewed is *strongly skewed*" and I don't have a definite answer for you other than pointing out what I think is *strongly skewed* when I see it. I assess this distribution is not strongly skewed given all of our observations are between 5 and 26 seconds. Now that we've met our validity conditions, we can utilize the *t* distribution to represent our null distribution. 
+A question you're going to ask again and again is "how skewed is *strongly skewed*" and I don't have a definite answer for you other than pointing out what I think is *strongly skewed* when I see it. I assess this distribution is not strongly skewed given all of our observations are between 5 and 26 seconds. Now that we've met our validity conditions, we can utilize the **t**-distribution to represent our null distribution. 
 
 ```{r}
 replications_dataframe = NULL
@@ -118,8 +118,6 @@ for (i in 1:num_reps){
   
 }
 
-
-
 replications_dataframe %>%
   ggplot(aes(x = trial_t_stat)) +
   labs(x = "Trial T-Stat", y = "Density", 
@@ -129,33 +127,37 @@ replications_dataframe %>%
                 args = list(df = sample_size - 1),
                 color = "red")
 ```
-The code above is here to help demonstrate why a t-distribution is appropriate for modeling our null distribution given the validity conditions are met. It should look relatively familiar as it is building the null distribution in a very similar manner to my previous examples. However, instead of calculating the trial mean or proportion, I calculate the trial t-statistic. You can see from the plot that the t-distribution isn't a perfect representation but fits our null distribution relatively well. Now that (hopefully) I've got your convinced, let's look at using the **pt** function to calculate our p-value.
+The code above is here to help demonstrate why a t-distribution is appropriate for modeling our null distribution given the validity conditions are met. It should look relatively familiar as it is building the null distribution in a very similar manner to my previous examples. However, instead of calculating the trial mean or proportion, I calculate the trial t-statistic. You can see from the plot that the t-distribution isn't a perfect representation but fits our null distribution relatively well. Now that (hopefully) I've got you convinced, let's look at using the **pt** function to calculate our p-value.
 
 ```{r}
-sample_t_stat = (sample_stat - null_mean) / (sd(estimates$Time) / sqrt(nrow(estimates)))
+standard_deviation = sd(estimates$Time)
+
+sample_size = nrow(estimates)
+
+sample_t_stat = (sample_stat - null_mean) / (standard_deviation / sqrt(sample_size))
 
 #One of the tails (left for this example)
-pt(-sample_t_stat, df = nrow(estimates) - 1)
+pt(-sample_t_stat, df = sample_size - 1)
 
 #The other tail (right for this example)
-1 - pt(sample_t_stat, df = nrow(estimates) - 1)
+1 - pt(sample_t_stat, df = sample_size - 1)
 
 #Both tails together
-2 * (1 - pt(abs(sample_t_stat), df = nrow(estimates) - 1))
+2 * (1 - pt(abs(sample_t_stat), df = sample_size - 1))
 ```
 The first step here was calculating the t-statistic for our original sample. It might be hard to remember that original sample at this point so maybe scroll up to remind yourself. We can then use the **pt()** function to find the area under the t-distribution curve. It's like **pnorm()** but for the t-distribution instead. In essence we are looking for the red area in the figure below. Clearly, I've zoomed in here so you can see the actual area.
 ```{r}
 ggplot(NULL, aes(x = c(-5, 5))) +
     stat_function(fun = dt, 
-                args = list(df = nrow(estimates) - 1)) +
+                args = list(df = sample_size - 1)) +
   geom_vline(xintercept = sample_t_stat, color = "red") +
   geom_vline(xintercept = -sample_t_stat, color = "red") +
   stat_function(fun = dt, 
-                args = list(df = nrow(estimates) - 1),
+                args = list(df = sample_size - 1),
                 xlim = c(-5, -sample_t_stat),
                 geom = "area", fill = "red") +
     stat_function(fun = dt, 
-                args = list(df = nrow(estimates) - 1),
+                args = list(df = sample_size - 1),
                 xlim = c(sample_t_stat, 5),
                 geom = "area", fill = "red") +
   labs(x = "", y = "") + theme_classic() + ylim(c(0, 0.01))

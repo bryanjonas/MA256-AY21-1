@@ -45,7 +45,7 @@ replications_dataframe %>%
 ```
 If we are looking for a 95% CI, we are looking for the range of values in which we capture the center 95% of these values.
 ```{r}
-#A lot of "instruction purpose" code here... and a little bit of 2SD cheating
+#A lot of "instructional purpose" code here... and a little bit of 2SD cheating
 below <- replications_dataframe %>%
   filter(trial_proportion <= (mean(trial_proportion) - 2*sd(trial_proportion)))
 
@@ -104,7 +104,7 @@ upper = sample_stat + qnorm(0.975) * standard_error
 
 paste("(",lower, ",", upper, ")")
 ```
-Our critical values are slightly less than 2... which is what you should expect based on our *Rule* above. You'll also notice that the "lower" calculation has a plus-sign because the critical value is already negative. Clearly there is no need to actually calculate both critical values as you can just calculate one and switch the signs. To take this one step further, we can actuall provide **qnorm()** with our sample mean and standard error to remove one of the steps here. This, in essence, shifts our normal distribution to reflect the simulation distribution I built above.
+Our critical values are slightly less than 2... which is what you should expect based on our *Rule* above. You'll also notice that the "lower" calculation has a plus-sign because the critical value is already negative. Clearly, there is no need to actually calculate both critical values as you can just calculate one and switch the signs. To take this one step further, we can actuall provide **qnorm()** with our sample mean and standard error to remove one of the steps here. This, in essence, shifts our normal distribution to reflect the simulation distribution I built above.
 ```{r}
 lower = qnorm(0.025, mean = sample_stat, sd = standard_error)
 
