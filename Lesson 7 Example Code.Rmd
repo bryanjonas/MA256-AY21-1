@@ -147,8 +147,7 @@ The first step here was calculating the t-statistic for our original sample. It 
 ```{r}
 ggplot(NULL, aes(x = c(-5, 5))) +
     stat_function(fun = dt, 
-                args = list(df = nrow(estimates) - 1),
-                color = "red")+
+                args = list(df = nrow(estimates) - 1)) +
   geom_vline(xintercept = sample_t_stat, color = "red") +
   geom_vline(xintercept = -sample_t_stat, color = "red") +
   stat_function(fun = dt, 
@@ -161,3 +160,8 @@ ggplot(NULL, aes(x = c(-5, 5))) +
                 geom = "area", fill = "red") +
   labs(x = "", y = "") + theme_classic() + ylim(c(0, 0.01))
 ```
+While I think it's important for you to know how to use the **pt()** function because it promotes a deeper understanding, *R* has another function that will allow you to quickly calculate the p-value.
+```{r}
+t.test(estimates, mu = null_mean, alternative = "two.sided")
+```
+Yes, that was **a lot** less code. Spend some time playing around with the parameters of **t.test()** so you become familiar with what each does and how to apply this function to different types of problems.
