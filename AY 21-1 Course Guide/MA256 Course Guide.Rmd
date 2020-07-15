@@ -192,7 +192,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 ## Lesson 8: Single Quantitative Variable - 2
 
 ### Objectives:
-* Demonstrate proficiency in answering research questions involving a single quantitative variable.
+* Demonstrate proficiency in answering research questions involving a single quantitative variable
 
 ### Before Class Activities:
 * Read: *Introduction to Statistical Investigations* - Chapter 3.3 - 3.5
@@ -203,17 +203,24 @@ I want to instill a sense of responsibility and ownership of your learning in th
 ### After Class Activities:
 * Finalize your work from class. Submission is due before the start of **Lesson 9**. One submission per group.
 
+\newpage
 
-<!-- # Block 3: Questions of Multiple Variables -->
+# Block 3: Questions of Multiple Variables
 
-<!-- ## Lesson 9: Two Quantitative Variables - 1 -->
+## Lesson 9: Two Quantitative Variables - 1
 
-<!-- ### Objectives: -->
+### Objectives:
+* Describe the relationship between two quantitative variables using direction, form, strength, and ununsual obervations
+* Under the computation of residuals and the formulation of a least squares regression line
+* Apply the simulation- and theory-based approach to solving these problems
 
-<!-- ### Before Class Activities: -->
+### Before Class Activities:
+* Read: *Introduction to Statistical Investigations* - Chapter 10
+* Watch: WileyPlus - Videos 10.5.1 - 10.5.4
+* Do: Read and follow the **Lesson 9 Example Code** document on GitHub.
 
-<!-- ### After Class Activities: -->
-
+### After Class Activities:
+* Review the material from Chapter 10. This was a lot for one day but we will be practicing more next class.
 
 <!-- ## Lesson 10: Two Quantitative Variables - 2 -->
 
@@ -245,7 +252,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 
 
 
-<!-- ## Lesson 13: Comparing Two Proportions - 1 -->
+<!-- ## Lesson 13: Midterm -->
 
 <!-- ### Objectives: -->
 
@@ -254,7 +261,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 <!-- ### After Class Activities: -->
 
 
-<!-- ## Lesson 14: Comparing Two Proportions - 2 -->
+<!-- ## Lesson 14: Comparing Two Proportions - 1 -->
 
 <!-- ### Objectives: -->
 
@@ -263,7 +270,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 <!-- ### After Class Activities: -->
 
 
-<!-- ## Lesson 15: Midterm -->
+<!-- ## Lesson 15: Comparing Two Proportions - 2 -->
 
 <!-- ### Objectives: -->
 

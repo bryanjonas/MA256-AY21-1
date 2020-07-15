@@ -98,36 +98,18 @@ estimates %>%
 A question you're going to ask again and again is "how skewed is *strongly skewed*" and I don't have a definite answer for you other than pointing out what I think is *strongly skewed* when I see it. I assess this distribution is not strongly skewed given all of our observations are between 5 and 26 seconds. Now that we've met our validity conditions, we can utilize the **t**-distribution to represent our null distribution. 
 
 ```{r}
-replications_dataframe = NULL
-
-num_reps = 5000 #Increased for smoother null distribution
-
-sample_size = 20
-
-for (i in 1:num_reps){
-  
-  trial = sample(new_population$Time, 
-                 size = sample_size, 
-                 replace = FALSE)
-  
-  standard_error = sd(trial) / sqrt(sample_size)
-  
-  trial_t_stat = (mean(trial) - null_mean) / standard_error
-  
-  replications_dataframe = rbind(replications_dataframe, data.frame(trial_t_stat))
-  
-}
+shifting_t <- function(x, mean, df) {dt(x - mean, df)}
 
 replications_dataframe %>%
-  ggplot(aes(x = trial_t_stat)) +
-  labs(x = "Trial T-Stat", y = "Density", 
+  ggplot(aes(x = trial_mean)) +
+  labs(x = "Trial Mean", y = "Density", 
        title = "Null Distribution and T-Distribution") +
   geom_histogram(aes(y = ..density..)) +
-  stat_function(fun = dt, 
-                args = list(df = sample_size - 1),
+  stat_function(fun = shifting_t, 
+                args = list(mean = null_mean, df = sample_size - 1),
                 color = "red")
 ```
-The code above is here to help demonstrate why a t-distribution is appropriate for modeling our null distribution given the validity conditions are met. It should look relatively familiar as it is building the null distribution in a very similar manner to my previous examples. However, instead of calculating the trial mean or proportion, I calculate the trial t-statistic. You can see from the plot that the t-distribution isn't a perfect representation but fits our null distribution relatively well. Now that (hopefully) I've got you convinced, let's look at using the **pt** function to calculate our p-value.
+The code above is here to help demonstrate why a t-distribution is appropriate for modeling our null distribution given the validity conditions are met. The only new part is my custom **shifting_t()** function that I included to move the curve over to our null hypothesis value. As we standardize our sample statistic (to create our standardized statistic) we normally don't have to worry about this shifting and it's just here for a visual. You can see from the plot that the t-distribution isn't a perfect representation but fits our null distribution relatively well. Now that (hopefully) I've got you convinced, let's look at using the **pt** function to calculate our p-value.
 
 ```{r}
 standard_deviation = sd(estimates$Time)
