@@ -1,5 +1,5 @@
 ---
-title: "Lesson 8 Example Code"
+title: "Lesson 8 Companion"
 output: pdf_document
 ---
 
@@ -7,6 +7,8 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 ```
+
+### Confidence intervals for a single mean:
 
 I'm not going to re-hash the example code from Lesson 6 here so please review that document if you have any questions. Instead I'm going to demonstrate finding critical values using the t-distribution. I will use the time estimates data from Lesson 7.
 

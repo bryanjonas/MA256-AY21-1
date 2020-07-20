@@ -51,7 +51,18 @@ You will see references to example code in many of the lessons. I have seperated
 
 I want to instill a sense of responsibility and ownership of your learning in this course. I have a high expectation of your level of mastery of the concepts, you do what is necessary to get yourself to that level.
 
+## External Resources:
+
+There are a lot of resources available to you on the internet on the topics we will cover, but I've included a few here that I really like. **Please** take a few minutes to look at these in the beginning of the semester. You never know when a few minutes of seeing what's out there now will save you hours finding an answer later.
+
+* Take a look at Hadley Wickham's book *R for Data Science* which is available at the link below. This is a great resource for your coding questions as it was written by the guy who wrote a large part of the *Tidyverse*. https://r4ds.had.co.nz/
+
+* *Statistical Inference via Data Science*: I recently found this book (and the associated *ModernDive* and *Infer* libraries) but it's got much of the same simulation-based ethos that we have in this course. There are a lot of code examples and descriptions. https://moderndive.com/index.html 
+
+* *Introductory Statistics with Randomization and Simulation*: This is a free textbook that covers a lot of the material from the course in a slightly different manner. This website also offer videos, slides, and labs that may help you understand material better. https://www.openintro.org/book/isrs/ 
+
 \newpage
+
 
 # Block 1: Question Formulation and Data Exploration
 
@@ -66,7 +77,6 @@ I want to instill a sense of responsibility and ownership of your learning in th
 * Read: *Introduction to Statistical Investigations* - Preliminary 1 (P.1)
 * Watch: WileyPlus - Videos P.1.1 - P.1.4 (Optional but recommended)
 * Do: Consult *Introduction to RStudio and Tidyverse* (AKA *Tidyverse Tutorial*) and follow the "Download R and RStudio" instructions.
-* Do: Take a look at Hadley Wickham's book *R for Data Science* which is available at the link below. This is a great resource for your coding questions as it was written by the guy who wrote a large part of the *Tidyverse*. https://r4ds.had.co.nz/
 
 ### After Class Activities:
 * Ensure that R/RStudio is installed and functional on your computer.
@@ -108,7 +118,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 * Watch: WileyPlus - Videos P.2.1 - P.2.5 (Optional but recommended)
 * Do: Work on the literature review referenced in **Lesson 2 - After Class Activities**.
 * Do: Review and replicate the code examples shown below.
-* Do: Follow the **Lesson 3 Example Code** document on GitHub.
+* Do: Follow the **Lesson 3 Companion** document on GitHub.
 
 
 ### After Class Activities:
@@ -147,7 +157,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 * Watch: WileyPlus - Videos 1.5.1 - 1.5.3
 * Do: *Introduction to Statistical Investigations* - Exploration 1.4
 * Do: Submit your work from **Lesson 4** before the start of class.
-* Do: Follow the **Lesson 5 Example Code** document on GitHub.
+* Do: Follow the **Lesson 5 Companion** document on GitHub.
 
 ### After Class Activities:
 * Ensure you understand the content discussed in class today... you'll get a chance to prove it next class.
@@ -163,7 +173,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 * Read: *Introduction to Statistical Investigations* - Chapter 3.1 - 3.2
 * Watch: WileyPlus - Videos 3.1.1 - 3.1.3, 3.2.1 - 3.2.2
 * Do: *Introduction to Statistical Investigations* - Exploration 3.2, Problems 1 - 11
-* Do: Follow the **Lesson 6 Example Code** document on GitHub.
+* Do: Follow the **Lesson 6 Companion** document on GitHub.
 
 ### After Class Activities:
 * Finalize your work from class. Submission is due before the start of **Lesson 7**. One submission per group.
@@ -182,7 +192,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 * Watch: WileyPlus - Videos 2.2.4 - 2.2.5, Videos 2.3.3/2.3.4 - 2.3.5
 * Do: *Introduction to Statistical Investigations* - Exploration 2.1B
 * Do: Submit your work from **Lesson 6** before the start of class.
-* Do: Follow the **Lesson 7 Example Code** document on GitHub.
+* Do: Follow the **Lesson 7 Companion** document on GitHub.
 
 ### After Class Activities:
 * Ensure you understand the content discussed in class today... you'll get a chance to prove it next class.
@@ -198,7 +208,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 * Read: *Introduction to Statistical Investigations* - Chapter 3.3 - 3.5
 * Watch: WileyPlus - Videos 3.3.1 - 3.3.2, 3.4.1.1 - 3.4.1.4
 * Do: *Introduction to Statistical Investigations* - Exploration 3.5, Problems 1 - 6
-* Do: Follow the **Lesson 8 Example Code** document on GitHub.
+* Do: Follow the **Lesson 8 Companion** document on GitHub.
 
 ### After Class Activities:
 * Finalize your work from class. Submission is due before the start of **Lesson 9**. One submission per group.
@@ -218,7 +228,7 @@ I want to instill a sense of responsibility and ownership of your learning in th
 * Read: *Introduction to Statistical Investigations* - Chapter 10
 * Watch: WileyPlus - Videos 10.5.1 - 10.5.4
 * Do: Submit your work from **Lesson 8** before the start of class.
-* Do: Follow the **Lesson 9 Example Code** document on GitHub.
+* Do: Follow the **Lesson 9 Companion** document on GitHub.
 
 ### After Class Activities:
 * Review the material from Chapter 10. This was a lot for one day but we will be practicing more next class.
@@ -232,31 +242,44 @@ I want to instill a sense of responsibility and ownership of your learning in th
 
 ### Before Class Activities:
 * Review: *Introduction to Statistical Investigations* - Chapter 10
+* Do: Follow the **Lesson 10 Companion** document on GitHub.
 
 ### After Class Activities:
 * Finalize your work from class. Submission is due before the start of **Lesson 11**. One submission per group.
 
+\newpage
+
 ## Lesson 11: Multiple Regression
 
 ### Objectives:
+* Understand the motivation for including additional variables in causal models
+* Understand and apply the definition of confounding variable
+* Build multiple linear regression models in *R*
 
 ### Before Class Activities:
 * Read: *Advanced Statistical Investigations With Probability* - Chapter 4.1 - 4.3
-* Do: Submit your work from **Lesson 9** before the start of class.
-* Do: Follow the **Lesson 10 Example Code** document on GitHub.
+* Do: Submit your work from **Lesson 10** before the start of class.
+* Do: Follow the **Lesson 11 Companion** document on GitHub.
+
 
 ### After Class Activities:
+* Consider the research question you answered from **Lesson 10**: are there any confounding variables that should have been considered in your analysis? Write a paragraph on what variables you would include as confounding variables, how you would include in the analysis, and how you think they would change the slope estimates you found. Due before the start of **Lesson 12**.
 
+\newpage
 
+## Lesson 12: Multiple Regression with Interaction
 
+### Objectives:
+* Understand the motivation for including interaction terms in causal models
+* Understand and apply the interpretation of coefficients for interaction terms
+* Build multiple liunear regression model in *R*
 
-<!-- ## Lesson 12: Multiple Regression with Interaction -->
+### Before Class Activities:
+* Read: *Advanced Statistical Investigations With Probability* - Chapter 4.4
+* Do: Submit your work from **Lesson 11** before the start of class.
+* Do: Follow the **Lesson 12 Companion** document on GitHub.
 
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
+### After Class Activities:
 
 
 

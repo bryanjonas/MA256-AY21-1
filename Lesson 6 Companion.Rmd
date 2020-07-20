@@ -1,5 +1,5 @@
 ---
-title: "Lesson 6 Example Code"
+title: "Lesson 6 Companion"
 output: pdf_document
 ---
 
@@ -7,6 +7,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center") 
 ```
+### Confidence intervals for a single proportion:
 
 Are you have read in the book, confidence intervals (CI) are all about "plausible values" of the parameter we are researching. The book presents the *2SD method* of calculating the 95% CI as well as presenting some "multiplier values" for common confidence levels. I aim to show you quick way to do this in *R* so you both understand where these numbers are coming and don't have to memorize (or look them up).
 
@@ -78,10 +79,10 @@ paste("(",lower, ",", upper, ")")
 ```
 However, since we have learned that the central limit theory applies to sample proportions (as long as we meet the validity conditions), we could use the normal distribution to represent the above distribution and make our life a lot easier.
 ```{r}
-ggplot(NULL, aes(x = c(0.25, 0.75))) +
+ggplot(data.frame(x =c(0.25, 0.75)), aes(x = x)) +
   stat_function(fun = dnorm, 
                 args = list(mean = sample_stat, sd = standard_error)) +
-    stat_function(fun = dnorm, 
+  stat_function(fun = dnorm, 
                 args = list(mean = sample_stat, sd = standard_error), 
                 xlim = c(lower, upper),
                 geom = "area", fill = "red") +
@@ -89,7 +90,7 @@ ggplot(NULL, aes(x = c(0.25, 0.75))) +
   scale_y_continuous(breaks = NULL)
 ```
 (We probably talked about this in class so I'm going to pretend like we did.) You recall that there is a useful property of the normal distribution that allows us to estimate how much of a population falls within the first few standard deviations of the mean as depicted in the image below:
-![Image](68-95-99-Rule.png)
+![68-95-99.7 Rule](images/68-95-99-Rule.png)
 Hopefully you see where the *2SD Method* came from for estimating a 95% CI. We can use **pnorm**'s brother (sister, friend, etc.) **qnorm** for a very similar task however. My saying for **qnorm()** is: "give me an area and I'll give you a *x*-value." If we want to find the critical value (or multipler) we can use **qnorm()** by giving is the area we want in the left tail for a 95% CI: 0.025. 
 ```{r}
 #Left critical value

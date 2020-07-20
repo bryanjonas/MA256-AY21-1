@@ -1,0 +1,10 @@
+---
+title: "Lesson 12 Companion"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
+```
+
