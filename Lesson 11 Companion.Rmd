@@ -175,5 +175,5 @@ $H_{0}:$ Controlling for height, there is no association between sex and IOCT ti
 
 $H_{a}:$ Controlling for height, there is an association between sex and IOCT time ($\beta_{2} \neq 0$)
 
-Our model summary states that the p-value for our sex slope parameter estimate ($\beta_{2}$) is **less than** $2 \times 10^{-16}$ (also known as "basically 0"). This suggests this sample provides very strong evidence against the null hypothesis and, further, suggests there is an association between sex and IOCT time.
+Our model summary states that the p-value for our sex slope parameter estimate ($\beta_{2}$) is **less than** $2 \times 10^{-16}$ (also known as "basically 0"). This suggests this sample provides very strong evidence against the null hypothesis and, further, suggests there is an association between sex and IOCT time. 
 

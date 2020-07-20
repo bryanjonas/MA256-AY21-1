@@ -263,7 +263,7 @@ There are a lot of resources available to you on the internet on the topics we w
 
 
 ### After Class Activities:
-* Consider the research question you answered from **Lesson 10**: are there any confounding variables that should have been considered in your analysis? Write a paragraph on what variables you would include as confounding variables, how you would include in the analysis, and how you think they would change the slope estimates you found. Due before the start of **Lesson 12**.
+* Finalize your work from class. Submission is due before the start of **Lesson 12**. One submission per group.
 
 \newpage
 
@@ -280,8 +280,7 @@ There are a lot of resources available to you on the internet on the topics we w
 * Do: Follow the **Lesson 12 Companion** document on GitHub.
 
 ### After Class Activities:
-
-
+* Study for your midterm!
 
 <!-- ## Lesson 13: Midterm -->
 
