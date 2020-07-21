@@ -77,6 +77,8 @@ upper = sample_stat + 2 * standard_error
 #Fancier than you need 
 paste("(",lower, ",", upper, ")")
 ```
+We can interpret this to say: "I am 95% confident that the true proportion of children who prefer candy over toys is between 46.4% and 58.2%. Remember our confidence interval gives a range of plausible values for our parameter.
+
 However, since we have learned that the central limit theory applies to sample proportions (as long as we meet the validity conditions), we could use the normal distribution to represent the above distribution and make our life a lot easier.
 ```{r}
 ggplot(data.frame(x =c(0.25, 0.75)), aes(x = x)) +
@@ -91,7 +93,7 @@ ggplot(data.frame(x =c(0.25, 0.75)), aes(x = x)) +
 ```
 (We probably talked about this in class so I'm going to pretend like we did.) You recall that there is a useful property of the normal distribution that allows us to estimate how much of a population falls within the first few standard deviations of the mean as depicted in the image below:
 ![68-95-99.7 Rule](images/68-95-99-Rule.png)
-Hopefully you see where the *2SD Method* came from for estimating a 95% CI. We can use **pnorm**'s brother (sister, friend, etc.) **qnorm** for a very similar task however. My saying for **qnorm()** is: "give me an area and I'll give you a *x*-value." If we want to find the critical value (or multipler) we can use **qnorm()** by giving is the area we want in the left tail for a 95% CI: 0.025. 
+Hopefully you see where the *2SD Method* came from for estimating a 95% CI. We can use **pnorm**'s brother (sister, friend, etc.) **qnorm** for a very similar task however. My saying for **qnorm()** is: "give me an area and I'll give you a *x*-value." If we want to find the critical value (or multiplier) we can use **qnorm()** by giving is the area we want in the left tail for a 95% CI: 0.025. 
 ```{r}
 #Left critical value
 qnorm(0.025)
@@ -105,7 +107,7 @@ upper = sample_stat + qnorm(0.975) * standard_error
 
 paste("(",lower, ",", upper, ")")
 ```
-Our critical values are slightly less than 2... which is what you should expect based on our *Rule* above. You'll also notice that the "lower" calculation has a plus-sign because the critical value is already negative. Clearly, there is no need to actually calculate both critical values as you can just calculate one and switch the signs. To take this one step further, we can actuall provide **qnorm()** with our sample mean and standard error to remove one of the steps here. This, in essence, shifts our normal distribution to reflect the simulation distribution I built above.
+Our critical values are slightly less than 2... which is what you should expect based on our *Rule* above. You'll also notice that the "lower" calculation has a plus-sign because the critical value is already negative. Clearly, there is no need to actually calculate both critical values as you can just calculate one and switch the signs. To take this one step further, we can actually provide **qnorm()** with our sample mean and standard error to remove one of the steps here. This, in essence, shifts our normal distribution to reflect the simulation distribution I built above.
 ```{r}
 lower = qnorm(0.025, mean = sample_stat, sd = standard_error)
 
@@ -123,3 +125,9 @@ replications_dataframe %>%
   geom_vline(xintercept = upper, color = "red") +
   labs(x = "Trial Proportions", y = "Density", 
        title = "Distribution of Simulated Proportions")
+```
+
+### Practical importance:
+Your textbook discusses the difference between "statistically significant" and "practically important" which may seem a little strange. *Statistically significant* means that you sample statistic is too unlikely when the null hypothesis is true (usually that there is no association). *Practically important* is more of a judgement of whether that really matters in the real world. Why are we discussing this in the confidence interval section? Because confidence intervals can help you judge practical importance.
+
+The example we have in this document is not the best for this discussion because the confidence interval includes our null hypothesis value (0.5) and therefore the corresponding p-value will show little to no evidence against the null hypothesis (which is does). I'll use an example later to further discuss this concept of practical importance.

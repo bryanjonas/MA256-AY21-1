@@ -8,10 +8,18 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center") 
 ```
 
+### Research question: 
+For this example I'm going to use the data available on the book's website for the "Time Estimate" problem.  It doesn't match the exact data in the textbook (for some reason) but it'll work for this example.
+
+Remember the research question is whether or not people can accurately estimate the length of a short song snippet. The parameter of interest is the population average length estimate ($\mu$), the statistic is the sample average length estimate ($\bar{x}$), and the hypothesis are as follows:
+
+$H_{0}: \mu = 10$
+
+$H_{a}: \10 \neq 10$
+
 ### Simulation-based Approach
 
-I always tell my students that, at the end of this discussion, you feel like we've done something sketchy then you probably grasp the concepts. Rest assured that, however sketchy it may feel, what we are about to do is grounded in solid statistics. For this example I'm going to use the data available on the book's website for the "Time Estimate" problem.  It doesn't match the exact data in the textbook (for some reason) but it'll work for this example.
-
+I always tell my students that, at the end of this discussion, you feel like we've done something sketchy then you probably grasp the concepts. Rest assured that, however sketchy it may feel, what we are about to do is grounded in solid statistics. 
 ```{r}
 library(tidyverse)
 library(patchwork) #Install this if you want to use it

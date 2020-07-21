@@ -8,10 +8,19 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center") 
 ```
 
+### Research question:
+
+I will use the "Halloween Treats" example in your book for this code.
+
+Remember our research question is whether children are more likely to choose candy over toys when presented with options. Our parameter is the population proportion of children who choose candy ($\pi$), the statistic is the sample proportion of children who choose candy (*p*), and our hypothesis are as follows:
+
+$H_{0}: \pi = 0.5$
+
+$H_{a}: \pi \neq 0.5$
+
 ### Simulating a Null Distribution:
 
-While the applets make it very easy to simulate a null distribution, I want to provide you with some code to demonstrate how to do a similar thing in *R*. I find that more exposure to code make students better coders (radical thought... I know) so don't just skip over this section. I will use the halloween treat example in your book for this code.
-
+While the applets make it very easy to simulate a null distribution, I want to provide you with some code to demonstrate how to do a similar thing in *R*. I find that more exposure to code make students better coders (radical thought... I know) so don't just skip over this section. 
 ```{r}
 library(tidyverse)
 
@@ -38,7 +47,7 @@ for (i in 1:num_reps){
   
 }
 ```
-After turning on the awesome, this code sets up several "parameters" for our simulation. This is "parameter" in the general sense, not to be confused with statistical parameters. We create a dataframe, or storage spot, to put our simulated proportions. We then define the number of repetitions (1000), the size of each simulated repetitions (283), the null probability (null hypothesis of random choice between two options), and the sample statistic (what we observed in our experiment). 
+After turning on the awesome, this code sets up several "parameters" for our simulation. This is "parameter" in the general sense, not to be confused with statistical parameters. We create a data frame, or storage spot, to put our simulated proportions. We then define the number of repetitions (1000), the size of each simulated repetitions (283), the null probability (null hypothesis of random choice between two options), and the sample statistic (what we observed in our experiment). 
 
 What follows is a **for** loop that serves as the "simulation" in our experiment. The code here is a bit more advanced but nothing insurmountable. The variable *trial* is basically a list of size 12 (sample size) of ones and zeros. This list is populated using the **sample** function which chooses from the vector we give it in *x* with the probability of each elements being chosen as defined by the *prob* parameter in the function. Said another way: the function will choose *1* with a probability of *null_prob* and *0* with the probability of *1-null_prob*. Finally, we need to sample *with replacement* otherwise you can't get twelve numbers out of a list of two.
 

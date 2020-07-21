@@ -43,11 +43,16 @@ upper = sample_stat + qt(0.975, df = sample_size - 1) *
 
 paste("(",lower, ",", upper, ")")
 ```
-I want to stress taking a moment at this point and asking yourself: "Does this make sense as a range of plausible values for my parameter?" I, of course, never make a msitaek in coding but you just might and so it helps to examine your answer as a check. Is it plausible, given what we know (our sample), that we can be 95% confident that the population average time estimate is between 11.5 and 16.0 seconds? I think it is and therefore I can be fairly comfortable that I've accurately calculated this CI. It's not a definitive check but it just might save you from making a silly mistake.
+I want to stress taking a moment at this point and asking yourself: "Does this make sense as a range of plausible values for my parameter?" I, of course, never make a msitaek in coding but you just might and so it helps to examine your answer as a check. Is it plausible, given what we know (our sample), that we can be 95% confident that the population average time estimate is between 11.6 and 16.0 seconds? I think it is and therefore I can be fairly comfortable that I've accurately calculated this CI. It's not a definitive check but it just might save you from making a silly mistake.
 
-You may recall seeing a very similar CI supplied by our **t.test()** fuction last lesson. Try to control your excitement but *R* will calculate a CI for whatever confidence level your want using this function. Another way to check your answer!
+You may recall seeing a very similar CI supplied by our **t.test()** function last lesson. Try to control your excitement but *R* will calculate a CI for whatever confidence level your want using this function. Another way to check your answer!
 ```{r}
 null_mean = 10
 
 t.test(estimates, mu = null_mean, alternative = "two.sided", conf.level = 0.95)
 ```
+
+### Practical importance:
+Let's discuss the practical importance of the outcome of our test. We see that the result is statistically significant meaning that our sample statistic was too unlikely to happen by chance alone (p-value of 0.001806). We can also see that we are 95% confident that the true length estimate falls between 11.6 and 16 seconds. Is the difference between this range and 10 seconds (null hypothesis value) practically important? 
+
+While the answer to this is obviously a matter of opinion, I would say our result is practically important. We are 95% confident that the average person, at best, overestimates the snippet length by at least 15%. That seems like a lot to me and suggests that there is evidence that we may not be good estimators of time. 

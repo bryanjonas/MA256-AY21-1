@@ -282,31 +282,43 @@ There are a lot of resources available to you on the internet on the topics we w
 ### After Class Activities:
 * Study for your midterm!
 
-<!-- ## Lesson 13: Midterm -->
+\newpage
 
-<!-- ### Objectives: -->
+## Lesson 13: Midterm
 
-<!-- ### Before Class Activities: -->
+### Exam Instructions: This exam will present you with a data set and a set of questions to answer about that data set. The expectation is that
+you will use the knowledge and experience gained as a student in MA256 to carefully and completely answer each question.
+You are authorized to use outside resources on this exam; however, over-reliance on a particular outside resource may
+result in reduced academic credit. The expectation is that you will utilize the methods taught in this course to answer the
+questions presented. Utilizing methods gathered from external sources may augment but will not replace the demonstration
+of your mastery of the primary course material.
 
-<!-- ### After Class Activities: -->
+\newpage
 
+## Lesson 14: Comparing Two Proportions - 1
 
-<!-- ## Lesson 14: Comparing Two Proportions - 1 -->
+### Objectives:
+* Properly identify the relevant statistic for these problems
+* Compose hypothesis for the appropriate test
+* Properly interpret p-values and confidence intervals
 
-<!-- ### Objectives: -->
+### Before Class Activities:
+* Read: *Introduction to Statistical Investigations* - Chapter 5
+* Watch: WileyPlus - Videos 5.3.1 - 5.3.3
+* Do: Follow the **Lesson 14 Companion** document on GitHub.
 
-<!-- ### Before Class Activities: -->
+### After Class Activities:
+* Ensure you understand the content discussed in class today... you'll get a chance to prove it next class.
 
-<!-- ### After Class Activities: -->
+\newpage
 
+## Lesson 15: Comparing Two Proportions - 2
 
-<!-- ## Lesson 15: Comparing Two Proportions - 2 -->
+### Objectives:
 
-<!-- ### Objectives: -->
+### Before Class Activities:
 
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
+### After Class Activities:
 
 
 
