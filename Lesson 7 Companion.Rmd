@@ -15,7 +15,7 @@ Remember the research question is whether or not people can accurately estimate 
 
 $H_{0}: \mu = 10$
 
-$H_{a}: \10 \neq 10$
+$H_{a}: \mu \neq 10$
 
 ### Simulation-based Approach
 
