@@ -10,7 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center") 
 ```
-## Update: 6 JULY 2020
+### Update: `r Sys.Date()`
 
 ## Task
 Develop critical statistical thinkers who can generate precise research questions; identify, collect, and analyze relevant data; and translate this analysis to a complete and correct response that answers the original question.
@@ -115,9 +115,9 @@ There are a lot of resources available to you on the internet on the topics we w
 ### Before Class Activities:
 * Read: *Introduction to Statistical Investigations* - Preliminary 2 (P.2)
 * Read: *Introduction to Statistical Investigations* - Section 6.1
+* Read: **Project Guidance** document on GitHub under the "Course Project Information" folder
 * Watch: WileyPlus - Videos P.2.1 - P.2.5 (Optional but recommended)
 * Do: Work on the literature review referenced in **Lesson 2 - After Class Activities**.
-* Do: Review and replicate the code examples shown below.
 * Do: Follow the **Lesson 3 Companion** document on GitHub.
 
 
@@ -315,41 +315,52 @@ of your mastery of the primary course material.
 ## Lesson 15: Comparing Two Proportions - 2
 
 ### Objectives:
+* Demonstrate proficiency in answering research questions comparing two proportions.
+
+### Before Class Activities:
+* Review: *Introduction to Statistical Investigations* - Chapter 5
+
+### After Class Activities:
+* Finalize your work from class. Submission is due before the start of **Lesson 16**. One submission per group.
+
+\newpage
+
+## Lesson 16: Project IPR 1
+
+### Objectives:
+*Present research question, literature review, dataset, and data exploration
+*Gain feedback and learn about other group's work
+*Practice providing a professional briefing
+*Learn to build a markdown presentation
+
+### Before Class Activities:
+*Review project guidance on GitHub
+*Prepare in-progress review presentation
+
+### After Class Activities:
+*Make any necessary modifications to your project plan based on feedback and/or information gleaned from other group's presentations.
+
+\newpage
+
+## Lesson 17: Comparing Two Means - 1
+
+### Objectives:
 
 ### Before Class Activities:
 
 ### After Class Activities:
 
+\newpage
 
+## Lesson 18: Comparing Two Means - 2
 
-<!-- ## Lesson 16: Project IPR 1 -->
+### Objectives:
 
-<!-- ### Objectives: -->
+### Before Class Activities:
 
-<!-- ### Before Class Activities: -->
+### After Class Activities:
 
-<!-- ### After Class Activities: -->
-
-
-<!-- ## Lesson 17: Comparing Two Means - 1 -->
-
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
-
-
-
-<!-- ## Lesson 18: Comparing Two Means - 2 -->
-
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
-
-
+\newpage
 
 <!-- ## Lesson 19: Paired Experiments -->
 
