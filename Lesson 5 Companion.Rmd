@@ -21,7 +21,7 @@ $H_{a}: \pi \neq 0.5$
 ### Simulating a Null Distribution:
 
 While the applets make it very easy to simulate a null distribution, I want to provide you with some code to demonstrate how to do a similar thing in *R*. I find that more exposure to code make students better coders (radical thought... I know) so don't just skip over this section. 
-```{r}
+```{r cache=TRUE}
 library(tidyverse)
 
 replications_dataframe = NULL

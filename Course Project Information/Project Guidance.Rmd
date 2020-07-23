@@ -86,7 +86,7 @@ Your project presentation is one of two culminating events for your course proje
 
 You will have about 8 minutes for this presentation. Remember that background information is important but the main star of the project is the interpretation of your linear model. I want to know how/if your model helps you answer your research question. What went wrong? What went right?
 
-You are free to use whatever presentation mechanism you'd like. While you can't pre-record this presentation, it needs to be apparent that you have rehearsed. This is a group event.
+You are free to use whatever presentation mechanism you'd like. While you can't pre-record this presentation, it needs to be apparent that you have rehearsed. This is a group event. One person in each group will turn this document in **.pptx** format on Microsoft Teams.
 
 ## Project Report:
 The project report is the second of the two culminating events for your course project. It should include the same information that is in your presentation but you have a little more room for exposition here. Here are a couple points of guidance for your report:
@@ -107,7 +107,9 @@ I'm a big fan of students choosing how they will tell the story of their project
 6. Discussion: Here is where you provide the "so what?" Discuss insights about your research question. Can you generalize your model? Why? Why not?
 7. Conclusion and Future Work: Finalize the paper and discuss extensions of your research.
 
-Please don't feel restricted by this. I've seen very successful projects that strayed from this format because the authors knew/cared enough to tell their project's story a little different and a little better. 
+Please don't feel restricted by this. I've seen very successful projects that strayed from this format because the authors knew/cared enough to tell their project's story a little different and a little better.
+
+You are required to use *R* Markdown for this report. You will turn your project in on Microsoft Teams in **.docx** format (remember you can knit to Word in *RStudio*). **This is an INDIVIDUAL event**.
 
 ## Closing Thoughts:
 I sincerely hope this project doesn't turn into "one more project" for you. I know that is quite aspirational and I can understand that you are inundated with other priorities. I hope that you choose a topic that will make the experience a pleasant one for you. You really never know what you might find once you start looking. 

@@ -122,6 +122,8 @@ sd_f = sd(females_IOCT$APFT_Score)
 n_m = nrow(males_IOCT)
 n_f = nrow(females_IOCT)
 
+#Don't worry too much about this mess,
+# it's the calculation for df in Welch's t-test.
 df = ((sd_m^2/n_m)+(sd_f^2/n_f))^2 /
   ((sd_m^4/(n_m^2*(n_m-1)))+(sd_f^4/(n_f^2*(n_f-1))))
 

@@ -77,7 +77,7 @@ So what can we take from the segmented bar chart? I seems to me that, in our sam
 
 We start by building our null distribution which, of course, assumes the truth of the null hypothesis. To do this we need to devise a strategy to break the association between the explanatory and response variables. We can do this by randomly assigning whether or not a baby's parents are smokers or nonsmokers while maintaining the same number of smokers and nonsmokers.
 
-```{r}
+```{r cache=TRUE}
 replications_dataframe = NULL
 
 num_reps = 1000
@@ -160,21 +160,21 @@ n_smoke = smoking %>%
   summarise(count = n())
 
 #Calculate the standard error of the statistic
-stan_error = sqrt( (p_hat * (1 - p_hat)) *
+stand_error = sqrt( (p_hat * (1 - p_hat)) *
                       ((1 / n_non) + (1 / n_smoke)))
 
 
-z = (sample_stat - null_diff) / stan_error
+z = (sample_stat - null_diff) / stand_error
 
 2 * (1 - pnorm(abs(z[[1]])))
 ```
 
 ```{r}
-2 * (1 - pnorm(abs(z[[1]]), mean = null_diff, sd = stan_error[[1]]))
+2 * (1 - pnorm(abs(z[[1]]), mean = null_diff, sd = stand_error[[1]]))
 ```
 While the second approach looks much shorter, it uses some of the same values calculated in the first so it's really a matter of dropping the standardization and using *R*'s ability to calculate the area under a custom normal curve. The p-values calculated aren't numerically the same but they are practically the same for the purposes of judging evidence against the null hypothesis. It's clear that we still have very strong evidence against the null hypothesis.
 
-You will notice I used **[[1]]** several times in the code. This is kind of a time saving mechanism for me as I like to program in the code to pull the values I need. Doing this the way I have leaves me with a "list" for the values of **p_hat** and **stan_error** (and several other places). As what I really want are the first values in these lists, the **[[1]]** allows me to pull that first value out to use it. There is likely a better way to do this but this is what I've got right now.
+You will notice I used **[[1]]** several times in the code. This is kind of a time saving mechanism for me as I like to program in the code to pull the values I need. Doing this the way I have leaves me with a "list" for the values of **p_hat** and **stand_error** (and several other places). As what I really want are the first values in these lists, the **[[1]]** allows me to pull that first value out to use it. There is likely a better way to do this but this is what I've got right now.
 
 ### Confidence interval:
 We can compute a confidence interval for our population parameter ($\pi_{nonsmoker} - \pi_{smoker}$) as well.
@@ -182,9 +182,9 @@ We can compute a confidence interval for our population parameter ($\pi_{nonsmok
 ```{r}
 #If it seems counterintiuitive that the "lower" equation
 # has a plus sign, remember that qnorm(0.025) is a negative number.
-lower = sample_stat + qnorm(0.025) * stan_error
+lower = sample_stat + qnorm(0.025) * stand_error
 
-upper = sample_stat - qnorm(0.025) * stan_error
+upper = sample_stat - qnorm(0.025) * stand_error
 
 paste("(", lower, ",", upper, ")")
 

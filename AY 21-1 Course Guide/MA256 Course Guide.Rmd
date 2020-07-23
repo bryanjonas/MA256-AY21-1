@@ -345,30 +345,43 @@ of your mastery of the primary course material.
 ## Lesson 17: Comparing Two Means - 1
 
 ### Objectives:
+* Properly identify the relevant statistic for these problems
+* Compose hypothesis for the appropriate test
+* Properly interpret p-values and confidence intervals
 
 ### Before Class Activities:
+* Read: *Introduction to Statistical Investigations* - Chapter 6
+* Watch: WileyPlus - Videos 6.3.1 - 6.3.2
+* Do: Follow **Lesson 17 Companion** document on GitHub.
 
 ### After Class Activities:
+* Ensure you understand the content discussed in class today... you'll get a chance to prove it next class.
 
 \newpage
 
 ## Lesson 18: Comparing Two Means - 2
 
 ### Objectives:
+* Demonstrate proficiency in answering research questions comparing two means.
 
 ### Before Class Activities:
+* Review: *Introduction to Statistical Investigations* - Chapter 6
 
 ### After Class Activities:
+* Finalize your work from class. Submission is due before the start of **Lesson 19**. One submission per group.
 
 \newpage
 
-<!-- ## Lesson 19: Paired Experiments -->
+## Lesson 19: Paired Experiments
 
-<!-- ### Objectives: -->
+### Objectives:
 
-<!-- ### Before Class Activities: -->
+### Before Class Activities:
+* Read: *Introduction to Statistical Investigations* - Chapter 7
+* Watch: WileyPlus - Videos 7.3.1 - 7.3.2
+* Do: Follow **Lesson 19 Companion** document on GitHub.
 
-<!-- ### After Class Activities: -->
+### After Class Activities:
 
 
 
