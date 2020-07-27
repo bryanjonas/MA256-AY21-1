@@ -375,6 +375,10 @@ of your mastery of the primary course material.
 ## Lesson 19: Paired Experiments
 
 ### Objectives:
+* Properly identify when a paired test is appropriate
+* Properly identify the relevant statistic for these problems
+* Compose hypothesis for the appropriate test
+* Properly interpret p-values and confidence intervals
 
 ### Before Class Activities:
 * Read: *Introduction to Statistical Investigations* - Chapter 7
@@ -382,26 +386,30 @@ of your mastery of the primary course material.
 * Do: Follow **Lesson 19 Companion** document on GitHub.
 
 ### After Class Activities:
+* Review content from class and work on your project.
 
+\newpage
 
+## Lesson 20: Comparing More Than Two Proportions - 1
 
-<!-- ## Lesson 20: Comparing More Than Two Proportions - 1 -->
+### Objectives:
 
-<!-- ### Objectives: -->
+### Before Class Activities:
+* Read: *Introduction to Statistical Investigations* - Chapter 8
+* Watch: WileyPlus - Videos 8.2.1 - 8.2.3
+* Do: Follow **Lesson 20 Companion** document on GitHub.
 
-<!-- ### Before Class Activities: -->
+### After Class Activities:
 
-<!-- ### After Class Activities: -->
+\newpage
 
+## Lesson 21: Comparing More Than Two Proportions - 2
 
+### Objectives:
 
-<!-- ## Lesson 21: Comparing More Than Two Proportions - 2 -->
+### Before Class Activities:
 
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
+### After Class Activities:
 
 
 
