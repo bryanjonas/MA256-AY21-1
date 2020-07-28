@@ -13,8 +13,7 @@ For this example I'm going to use the data available on the book's website for t
 
 Remember the research question is whether or not people can accurately estimate the length of a short song snippet. The parameter of interest is the population average length estimate ($\mu$), the statistic is the sample average length estimate ($\bar{x}$), and the hypothesis are as follows:
 
-$H_{0}: \mu = 10$
-
+$H_{0}: \mu = 10$  
 $H_{a}: \mu \neq 10$
 
 ### Simulation-based Approach

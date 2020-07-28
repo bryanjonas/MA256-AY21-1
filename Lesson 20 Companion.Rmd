@@ -12,8 +12,7 @@ knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 
 I'm going to utilize the second nightlight example (three categories for both variables) for this document. Recall that the research question was whether or not the amount of light in a child's room is associated with refraction result. The hypothesis for this analysis are:
 
-$H_{0}:$ There is no association between the level of light and refraction result.
-
+$H_{0}:$ There is no association between the level of light and refraction result.  
 $H_{a}:$ There is an association between the level of light and refraction result.
 
 You'll notice that this chapter discusses two different statistics for these sort of research questions: *mean absolute difference* (MAD) and the *chi-squared statistic* ($\chi^{2}$). I believe the authors chose to do this because the MAD statistic is a bit easier to connect to what you intuitively want to measure in regard to the difference between groups. The book points out several strengths of the $\chi^{2}$ statistic here so we will focus on that.

@@ -87,8 +87,7 @@ You see that we have three terms in the model: the two "main effects" of *height
 
 Let's start off by writing out the equation of our model with an interaction term:
 
-$\hat{y} = -1.703x_{1} - 199.660x_{2} + 1.792x_{1}x_{2} + 375.267$
-
+$\hat{y} = -1.703x_{1} - 199.660x_{2} + 1.792x_{1}x_{2} + 375.267$  
 where $x_{1}$ is height in inches and $x_{2}$ is sex (0 is female, 1 is male)
 
 To interpret our coefficients with the interaction term, there are a couple extra steps. First let's consider intepreting the effect of height on IOCT time in this model.

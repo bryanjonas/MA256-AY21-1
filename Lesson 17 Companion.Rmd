@@ -12,14 +12,12 @@ knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 
 For this document I will use the breastfeeding vs. intelligence data set from the book. The research question here is whether or not breastfeeding has a connection with cognitive functioning at age four.
 
-$H_{0}:$ There is no association between breastfeeding and general cognitive index (GCI) at age four.
-
+$H_{0}:$ There is no association between breastfeeding and general cognitive index (GCI) at age four.  
 $H_{a}:$ There is an association between breastfeeding and general cognitive index (GCI) at age four.
 
 Our explanatory variable is the binary categorical variable of whether or not a child was breastfed and the response is that child's GCI at age four. The parameter of interest is the population difference in average CGI between the groups (breastfed/not) ($\mu_{breastfed}-\mu_{not}$), the relevant statistic is the sample difference in average GCI ($\bar{x}_{breastfed}-\bar{x}_{not}$), and we can rewrite the hypothesis as follows:
 
-$H_{0}: \mu_{breastfed}-\mu_{not} = 0$
-
+$H_{0}: \mu_{breastfed}-\mu_{not} = 0$  
 $H_{a}: \mu_{breastfed}-\mu_{not} \neq 0$
 
 ```{r}
@@ -156,8 +154,7 @@ Student's t-test relies on equal variances of the quantitative variables between
 
 We can use Fisher's F-test to calculate a p-value to demonstrate whether there is evidence to believe that the variances are approximately equal. Our hypotheses for this test would be:
 
-$H_{0}: \sigma^{2}_{breastfed} = \sigma^{2}_{not}$
-
+$H_{0}: \sigma^{2}_{breastfed} = \sigma^{2}_{not}$  
 $H_{a}: \sigma^{2}_{breastfed} \neq \sigma^{2}_{not}$
 
 ```{r}

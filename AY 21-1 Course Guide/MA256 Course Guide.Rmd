@@ -393,6 +393,9 @@ of your mastery of the primary course material.
 ## Lesson 20: Comparing More Than Two Proportions - 1
 
 ### Objectives:
+* Properly identify the relevant statistic for these problems
+* Compose hypothesis for the appropriate test
+* Properly interpret p-values and avenues for further investigation
 
 ### Before Class Activities:
 * Read: *Introduction to Statistical Investigations* - Chapter 8
@@ -400,37 +403,50 @@ of your mastery of the primary course material.
 * Do: Follow **Lesson 20 Companion** document on GitHub.
 
 ### After Class Activities:
+* Ensure you understand the content discussed in class today... you'll get a chance to prove it next class.
 
 \newpage
 
 ## Lesson 21: Comparing More Than Two Proportions - 2
 
 ### Objectives:
+* Demonstrate proficiency in answering research questions comparing more than two proportions.
 
 ### Before Class Activities:
+* Review: *Introduction to Statistical Investigations* - Chapter 8
 
 ### After Class Activities:
+* Finalize your work from class. Submission is due before the start of **Lesson 22**. One submission per group.
 
+\newpage
 
+## Lesson 22: Comparing Multiple Means - 1
 
-<!-- ## Lesson 22: Comparing Multiple Means - 1 -->
+### Objectives:
+* Properly identify the relevant statistic for these problems
+* Compose hypothesis for the appropriate test
+* Properly interpret p-values and avenues for further investigation
 
-<!-- ### Objectives: -->
+### Before Class Activities:
+* Read: *Introduction to Statistical Investigations* - Chapter 9
+* Watch: WileyPlus - Videos 9.2.1 - 9.2.3
+* Do: Follow **Lesson 22 Companion** document on GitHub.
 
-<!-- ### Before Class Activities: -->
+### After Class Activities:
+* Ensure you understand the content discussed in class today... you'll get a chance to prove it next class.
 
-<!-- ### After Class Activities: -->
+\newpage
 
+## Lesson 23: Comparing Multiple Means - 2
 
+### Objectives:
+* Demonstrate proficiency in answering research questions comparing more than two proportions.
 
-<!-- ## Lesson 23: Comparing Multiple Means - 2 -->
+### Before Class Activities:
+* Review: *Introduction to Statistical Investigations* - Chapter 9
 
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
-
+### After Class Activities:
+* Finalize your work from class. Submission is due before the start of **Lesson 24**. One submission per group.
 
 
 <!-- # Block 4: Probability Topics -->

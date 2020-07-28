@@ -90,8 +90,7 @@ summary(model)
 
 Composing our linear model's equation from this output would give us:
 
-$\hat{y} = -0.3966 x_{1} - 80.1894 x_{2} + 290.0195$
-
+$\hat{y} = -0.3966 x_{1} - 80.1894 x_{2} + 290.0195$  
 where $x_{1}$: height in inches and $x_{2}$: sex (0 is female, 1 is male)
 
 To interpret our coefficients, we would say:
@@ -163,16 +162,14 @@ Before we can interpret the p-values, we need to have our hypothesis.
 
 **Height**
 
-$H_{0}:$ Controlling for sex, there is no association between height and IOCT time ($\beta_{1} = 0$)
-
+$H_{0}:$ Controlling for sex, there is no association between height and IOCT time ($\beta_{1} = 0$)  
 $H_{a}:$ Controlling for sex, there is an association between height and IOCT time ($\beta_{1} \neq 0$)
 
 Our model summary states that the p-value for our height slope parameter estimate ($\beta_{1}$) is 0.612 which means we have little to no evidence against the null hypothesis. This suggests we can not make the inference that there is an association between height and IOCT time from this sample.
 
 **Sex**
 
-$H_{0}:$ Controlling for height, there is no association between sex and IOCT time ($\beta_{2} = 0$)
-
+$H_{0}:$ Controlling for height, there is no association between sex and IOCT time ($\beta_{2} = 0$)  
 $H_{a}:$ Controlling for height, there is an association between sex and IOCT time ($\beta_{2} \neq 0$)
 
 Our model summary states that the p-value for our sex slope parameter estimate ($\beta_{2}$) is **less than** $2 \times 10^{-16}$ (also known as "basically 0"). This suggests this sample provides very strong evidence against the null hypothesis and, further, suggests there is an association between sex and IOCT time. 

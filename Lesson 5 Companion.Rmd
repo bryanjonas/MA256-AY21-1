@@ -14,16 +14,16 @@ I will use the "Halloween Treats" example in your book for this code.
 
 Remember our research question is whether children are more likely to choose candy over toys when presented with options. Our parameter is the population proportion of children who choose candy ($\pi$), the statistic is the sample proportion of children who choose candy (*p*), and our hypothesis are as follows:
 
-$H_{0}: \pi = 0.5$
-
+$H_{0}: \pi = 0.5$  
 $H_{a}: \pi \neq 0.5$
 
+```{r}
+library(tidyverse)
+```
 ### Simulating a Null Distribution:
 
 While the applets make it very easy to simulate a null distribution, I want to provide you with some code to demonstrate how to do a similar thing in *R*. I find that more exposure to code make students better coders (radical thought... I know) so don't just skip over this section. 
 ```{r cache=TRUE}
-library(tidyverse)
-
 replications_dataframe = NULL
 
 num_reps = 1000

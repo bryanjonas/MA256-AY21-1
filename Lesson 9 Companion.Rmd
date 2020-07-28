@@ -28,8 +28,7 @@ It appears as if there is a slightly negative association between these two vari
 
 Let's establish our hypotheses for these tests:
 
-$H_{0}:$ There is no association between GPA and time spent on non-academic activities ($\beta_{1} = 0$)
-
+$H_{0}:$ There is no association between GPA and time spent on non-academic activities ($\beta_{1} = 0$)  
 $H_{a}:$ There is an association ($\beta_{1} \neq 0$)
 
 Now let's find the sample statistic we will use for our approaches. In this case, we will utilize the slope of the least squares regression line as our statistic. First a brief exploration of the **lm()** function in *R*. You will use **lm()** a lot in this course, you will learn to love it, and you will miss it when you leave the course. Like a lot of functions in *R*, it automates a lot of your work and provides more information than you know what to do with. Let's start by building a **l**inear **m**odel for our research question.
@@ -42,8 +41,7 @@ sample_stat = model$coefficients[[2]]
 ```
 Starting with the first line, you should read these arguments inside the **lm()** function as "GPA as a function of hours." Using this trick will help you decipher what model you are building when you move into more complicated models.  Once we build this model we save it to the variable *model* for later use. The first use is to look at the summary of the model using the function... **summary()**. This summary provides a lot of important information about our model, much of which we will explore later. The first thing I want to do, however, is to simply establish how to write our the model from this summary output:
 
-$\hat{y} = -0.005884 x_{1} + 3.597691$
-
+$\hat{y} = -0.005884 x_{1} + 3.597691$  
 where $x_{1}$ is non-academic time (hours)
 
 You will recall that when we put a "hat" ( $\hat{}$ ) on something we are signifying it is an estimate. Therefore we can use this equation to find our estimate of *y* (GPA). This estimate will usually be different than the "actual" *y* values (the values in our data set). We can now identify our slope parameter ($\beta_{1}$) as -0.005884 and we will use this in the rest of the document. We can also see our intercept estimate ($\beta_{0}$) is 3.567691.
@@ -182,8 +180,7 @@ If you did want to consider it for this problem, we would say that the student w
 
 You may have noticed that there is another test that is executed when you build a linear model using **lm()**: some test that uses the *F-statistic*. While we haven't covered this statistic (and distribution) yet, we will later in the course. For now it's sufficient to discuss the hypothesis associated with this test and what we can use it for. Unlike the *t-test* that only considers one regression coefficient at a time, the *F-test* can compare multiple coefficients.
 
-$H_{0}:$ The fit of the intercept-only model and your model are equal.
-
+$H_{0}:$ The fit of the intercept-only model and your model are equal.  
 $H_{a}:$ The fit of the intercept-only model is significantly reduced compared to your model.
 
 It's important to consider the result of the F-test as it informs you whether your explanatory variable is contributing to the fit of your model. When you are only considering a single explanatory variable it hardly seems like this extra p-value is worthwhile... but what if you had more than one explanatory variable? Overall, this *model utility test* is generally used in predictive modeling to judge whether our model is better than the intercept-only model. 

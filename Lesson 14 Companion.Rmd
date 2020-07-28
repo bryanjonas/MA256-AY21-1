@@ -11,8 +11,7 @@ knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 
 I'm going to use the parent's smoking habit vs. baby's gender example for this document. The research question is: Does a parent's smoking habit have an effect on the gender of their baby? To test this question, scientists collected data on the whether both parents smoked and the gender of their child.
 
-$H_{0}:$ The population proportion of boys born to smoking parents is the same as the population proportion of boys born to nonsmoking parents. Put simply: There is no association between smoking status of parents and the sex of child.
-
+$H_{0}:$ The population proportion of boys born to smoking parents is the same as the population proportion of boys born to nonsmoking parents. Put simply: There is no association between smoking status of parents and the sex of child.  
 $H_{a}:$ The population proportion of boys born to smoking parents is different from the population proportion of boys born to nonsmoking parents. Or: There is no association between smoking status of parents and the sex of child.
 
 Our explanatory variable is the parent's smoking status and the response variable is the sex of the baby. Hopefully, this is fairly clear. What might not be so clear is the choice of sample statistic. When we dealt with single proportion problems our relevant statistic was the sample proportion (*p*); however, now that we have two proportions, our sample statistic is the difference between these two proportions:
@@ -26,8 +25,7 @@ Two things to keep track of:
 
 We can also rewrite our hypothesis in notation:
 
-$H_{0}: \pi_{nonsmoker} - \pi_{smoker} = 0$
-
+$H_{0}: \pi_{nonsmoker} - \pi_{smoker} = 0$  
 $H_{a}: \pi_{nonsmoker} - \pi_{smoker} \neq 0$
 
 ### Data exploration:
