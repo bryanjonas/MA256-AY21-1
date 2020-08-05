@@ -30,22 +30,22 @@ recall = read_table2("http://www.isi-stats.com/isi/data/chap9/Recall.txt")
 head(recall)
 
 #Define "between group variability" function
-b_g_v <- function(g_s, o_s, l){
+b_g_v <- function(g_s, o_s, k){
   num = 0
-  for (i in 1:l){
+  for (i in 1:k){
     num = num + (g_s[[4]][[i]] * (g_s[[2]][[i]] - o_s[[1]][[1]])^2)
   }
-  denom = l - 1
+  denom = k - 1
   return(num / denom)
 }
 
 #Define "within group variability" function
-w_g_v <- function(g_s, o_s, l, s_s){
+w_g_v <- function(g_s, o_s, k, s_s){
   num = 0
-  for (i in 1:l){
+  for (i in 1:k){
     num = num + ((g_s[[4]][[i]] - 1) * (g_s[[3]][[i]]^2))
   }
-  denom = s_s - l
+  denom = s_s - k
   return(num / denom)
 }
 
@@ -62,12 +62,12 @@ overall_stats = recall %>%
 
 sample_size = nrow(recall)
 
-# "l" is the number of groups being compared
-l = nrow(group_stats)
+# "k" is the number of groups being compared
+k = nrow(group_stats)
 
 #Call our functions with the statistics we calculated as arguments
-btwn_grp_var = b_g_v(group_stats, overall_stats, l)
-with_grp_var = w_g_v(group_stats, overall_stats, l, sample_size)
+btwn_grp_var = b_g_v(group_stats, overall_stats, k)
+with_grp_var = w_g_v(group_stats, overall_stats, k, sample_size)
 
 sample_f_stat = btwn_grp_var / with_grp_var
 ``` 
@@ -110,10 +110,10 @@ for (i in 1:num_reps){
 
   sample_size = nrow(trial_recall)
 
-  l = nrow(group_stats)
+  k = nrow(group_stats)
 
-  btwn_grp_var = b_g_v(group_stats, overall_stats, l)
-  with_grp_var = w_g_v(group_stats, overall_stats, l, sample_size)
+  btwn_grp_var = b_g_v(group_stats, overall_stats, k)
+  with_grp_var = w_g_v(group_stats, overall_stats, k, sample_size)
 
   trial_f_stat = btwn_grp_var / with_grp_var
     
@@ -156,13 +156,25 @@ recall %>%
   summarise(SD = sd(Recall))
 ```
 
-Now that we have met the validity conditions, I will demonstrate two methods of finding a p-value using the theory-based approach.
+Now that we have met the validity conditions, let's see how well the F-distribution fits our simular null distribution. While not strictly a necessary step, I include it here for instructional purposes.
 
 ```{r}
-#I'll discuss these more later
-df_1 = l - 1
-df_2 = sample_size - l
+df_1 = k - 1
+df_2 = sample_size - k
 
+replications_dataframe %>%
+  ggplot(aes(x = trial_f_stat)) +
+  stat_function(fun = df,
+                args = list(df1 = df_1, df2 = df_2),
+                color = "slateblue") +
+  geom_histogram(aes(y = ..density..)) +
+  labs(x = "Simulated F Statistic", y = "Density", 
+       title = "Simulated Null and F Distributions")
+```
+
+Now I will demonstrate two methods of finding a p-value using the theory-based approach.
+
+```{r}
 #Using the PDF of the F-distribution
 1 - pf(sample_f_stat, df1 = df_1, df2 = df_2)
 ```
@@ -198,14 +210,6 @@ Just ensure that you remember that order matters in regards to which group is *x
 
 **What about these other numbers in my ANOVA output?:**
 
-You may recall that you've used the F-statistic twice already in this class: in linear regression and in evaluating whether variances were approximately equal. This should give you an idea of how valuable ANOVA is in numerous situations. Let's dive in a little bit more on these values in our summary output to better understand what they tell us.
+I encourage you to check out my "ANOVA Exploration" document on GitHub for a little more information about ANOVA and it's connection to tests we've covered previously.
 
-```{r}
-summary(anova_model)
-```
-**Treatment vs. Residuals:** You will see that everything (except the final p-value) is divided between the explanatory variable (the treatment) and the error (the residuals).
-
-**Degrees of Freedom (df):** Hopefully a bit of pattern matching demonstrates that our degrees of freedom calculations are:  
-$~~~$ The number of groups minus one ($l - 1$) for our treatment (*Condition*) and  
-$~~~$ The number of observations minus the number of groups for the error (or residuals).
 

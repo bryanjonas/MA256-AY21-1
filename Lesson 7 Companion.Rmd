@@ -115,7 +115,7 @@ estimates %>%
 ```
 A question you're going to ask again and again is "how skewed is *strongly skewed*" and I would advise you to go check out my "Normality Testing" document on GitHub. In the end, I assess this distribution is not strongly skewed. Now that we've met our validity conditions, the central limit theorem (CLT) tells us that our "trial means" will be distributed normally if the population is distributed normally or approximately normally if the sample size is large enough (regardless of the population distribution). These normal distributions will have a mean of $\mu$ and a standard deviation of $\frac{\sigma}{\sqrt{n}}$. 
 
-But wait, we don't have our population standard deviation ($\sigma$) so what do we do? The best we can do is approximate it using the sample standard deviation($s$). Note: Even though it is named *new_population*, our somewhat artificial *population* is not truely our broader population.
+But wait, we don't have our population standard deviation ($\sigma$) so what do we do? The best we can do is approximate it using the sample standard deviation ($s$). Note: Even though it is named *new_population*, our somewhat artificial *population* is not truely our broader population.
 
 ```{r}
 CLT_sd = sd(new_population$Time) / sqrt(sample_size)
