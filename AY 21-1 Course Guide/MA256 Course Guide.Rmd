@@ -448,22 +448,11 @@ of your mastery of the primary course material.
 ### After Class Activities:
 * Finalize your work from class. Submission is due before the start of **Lesson 24**. One submission per group.
 
+\newpage
 
-<!-- # Block 4: Probability Topics -->
+# Block 4: Probability Topics
 
-
-
-<!-- ## Lesson 24: Axioms of Probability and Counting -->
-
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
-
-
-
-<!-- ## Lesson 25: Conditional Probability -->
+## Lesson 24: Axioms of Probability and Counting
 
 <!-- ### Objectives: -->
 
@@ -471,19 +460,9 @@ of your mastery of the primary course material.
 
 <!-- ### After Class Activities: -->
 
+\newpage
 
-
-<!-- ## Lesson 26: Discrete Disctributions -->
-
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
-
-
-
-<!-- ## Lesson 27: Course Project IPR -->
+## Lesson 25: Conditional Probability
 
 <!-- ### Objectives: -->
 
@@ -491,19 +470,9 @@ of your mastery of the primary course material.
 
 <!-- ### After Class Activities: -->
 
+\newpage
 
-
-<!-- ## Lesson 28: Continuous Distributions  -->
-
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
-
-
-
-<!-- ## Lesson 29: Course Project Presentations -->
+## Lesson 26: Discrete Disctributions
 
 <!-- ### Objectives: -->
 
@@ -511,13 +480,51 @@ of your mastery of the primary course material.
 
 <!-- ### After Class Activities: -->
 
+\newpage
+
+## Lesson 27: Course Project IPR
+
+### Objectives:
+*Present research question, dataset, linear model, and validity conditions
+*Gain feedback and learn about other group's work
+*Practice providing a professional briefing
+*Learn to build a markdown presentation
+
+### Before Class Activities:
+*Review project guidance on GitHub
+*Prepare in-progress review presentation
+
+### After Class Activities:
+*Make any necessary modifications to your project plan based on feedback and/or information gleaned from other group's presentations.
 
 
-<!-- ## Lesson 30: Course Review -->
+\newpage
+
+## Lesson 28: Continuous Distributions
 
 <!-- ### Objectives: -->
 
 <!-- ### Before Class Activities: -->
 
 <!-- ### After Class Activities: -->
-<!-- -->
+
+\newpage
+
+## Lesson 29: Course Project Presentations
+
+<!-- ### Objectives: -->
+
+<!-- ### Before Class Activities: -->
+
+<!-- ### After Class Activities: -->
+
+\newpage
+
+## Lesson 30: Course Review
+
+<!-- ### Objectives: -->
+
+<!-- ### Before Class Activities: -->
+
+<!-- ### After Class Activities: -->
+
