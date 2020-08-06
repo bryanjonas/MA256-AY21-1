@@ -328,17 +328,17 @@ of your mastery of the primary course material.
 ## Lesson 16: Project IPR 1
 
 ### Objectives:
-*Present research question, literature review, dataset, and data exploration
-*Gain feedback and learn about other group's work
-*Practice providing a professional briefing
-*Learn to build a markdown presentation
+* Present research question, literature review, dataset, and data exploration
+* Gain feedback and learn about other group's work
+* Practice providing a professional briefing
+* Learn to build a markdown presentation
 
 ### Before Class Activities:
-*Review project guidance on GitHub
-*Prepare in-progress review presentation
+* Review project guidance on GitHub
+* Prepare in-progress review presentation
 
 ### After Class Activities:
-*Make any necessary modifications to your project plan based on feedback and/or information gleaned from other group's presentations.
+* Make any necessary modifications to your project plan based on feedback and/or information gleaned from other group's presentations.
 
 \newpage
 
@@ -485,17 +485,16 @@ of your mastery of the primary course material.
 ## Lesson 27: Course Project IPR
 
 ### Objectives:
-*Present research question, dataset, linear model, and validity conditions
-*Gain feedback and learn about other group's work
-*Practice providing a professional briefing
-*Learn to build a markdown presentation
+* Present research question, dataset, linear model, and validity conditions
+* Gain feedback and learn about other group's work
+* Practice providing a professional briefing
 
 ### Before Class Activities:
-*Review project guidance on GitHub
-*Prepare in-progress review presentation
+* Review project guidance on GitHub
+* Prepare in-progress review presentation
 
 ### After Class Activities:
-*Make any necessary modifications to your project plan based on feedback and/or information gleaned from other group's presentations.
+* Make any necessary modifications to your project plan based on feedback and/or information gleaned from other group's presentations.
 
 
 \newpage
@@ -512,19 +511,26 @@ of your mastery of the primary course material.
 
 ## Lesson 29: Course Project Presentations
 
-<!-- ### Objectives: -->
+### Objectives:
+* Present your course projects!
 
-<!-- ### Before Class Activities: -->
+### Before Class Activities:
+* Ensure you are prepared for your presentation by rehearsing your audio/visual plan.
+* Your presentation file needs to be submitted on Teams before the start of the class period.
 
-<!-- ### After Class Activities: -->
+### After Class Activities:
+* Prepare for the course review.
 
 \newpage
 
 ## Lesson 30: Course Review
 
-<!-- ### Objectives: -->
+### Objectives:
+* Review concepts discussed in the course
 
-<!-- ### Before Class Activities: -->
+### Before Class Activities:
+* Course review organization will be determined closer to the end of the semester.
 
-<!-- ### After Class Activities: -->
+### After Class Activities:
+* Study for the TEE!
 
