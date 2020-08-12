@@ -56,6 +56,16 @@ I'm not "down" on surveys I just have a healthy aversion to cadets using them fo
 
 This is why I caution cadets about doing a survey for their project. You certainly overcome these hurdles but you have to be deliberate. The benefit of doing a survey is that you can explore some topics that are really relevant to you and your classmates.
 
+## Project Proposal:
+This should be a pretty low-threat submission but the timing may make it tricky as I need to have you turn it in before you shift focus to the midterm. As we enter into the block discussing linear regression, your project should be on your mind so you are prepared for this. Your submission needs to include:
+
+1. A well-phrased research question.
+2. A list of your variables, their categories, and their unit of measure in your dataset. 
+3. A causal diagram using these variables.
+4. A short description of your dataset (including where I can find it). Ensure you identify the observational unit.
+
+You will submit this document as many times as necessary in order to get your project on a good track. Pick well early on!
+
 ## In-Progress Review (IPR) 1:
 For this IPR, I'm interested in hearing about a few things:
 
