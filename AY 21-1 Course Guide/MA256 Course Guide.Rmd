@@ -27,8 +27,8 @@ Below is the point break-down for this course:
 |:--------------:|:------:|
 | **Homework**       |   **350**  |
 |     Block 1    |   50  |
-|     Block 2    |   125  |
-|     Block 3    |   125  |
+|     Block 2    |   100  |
+|     Block 3    |   150  |
 |     Block 4    |   50   |
 | **Midterm**        |   **150**  |
 | **Course Project** |   **250**  |
