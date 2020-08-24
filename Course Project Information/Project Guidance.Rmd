@@ -60,7 +60,7 @@ This is why I caution cadets about doing a survey for their project. You certain
 This should be a pretty low-threat submission but the timing may make it tricky as I need to have you turn it in before you shift focus to the midterm. As we enter into the block discussing linear regression, your project should be on your mind so you are prepared for this. Your submission needs to include:
 
 1. A well-phrased research question.
-2. A list of your variables, their categories, and their unit of measure in your dataset. 
+2. A list of your variables, their classifications, and their unit of measure in your dataset. 
 3. A causal diagram using these variables.
 4. A short description of your dataset (including where I can find it). Ensure you identify the observational unit.
 
@@ -74,7 +74,7 @@ For this IPR, I'm interested in hearing about a few things:
 3. Your data set: Where did you get it from? How was it collected? Observational unit? Any "modifications" you're going to have to make to use it?
 4. Data exploration: Show me some interesting things you found when exploring your data. You should be at the bi-variate analysis point here (maybe adding a color to show category). Plot your explanatory variables vs. the response and **analyze**. Pull out of a few interesting facts from the sample that may help inform further analysis. **No models at this point.**
 
-You are going to use a Markdown Presentation for this briefing. Embrace a new thing! I don't need fancy but I do want professional. It's ok to have a little fun, but it should be clear you practiced.
+You are going to use a "R Presentation" for this briefing. Embrace a new thing! I don't need fancy but I do want professional. It's ok to have a little fun, but it should be clear you practiced.
 
 Expect to give these to the class as a whole and your briefing should take between 5 to 7 minutes. If you'd like to pre-record, I'm ok with that just be ready to show the video in the class period set aside for IPR 1. This is a group event.
 
@@ -87,7 +87,7 @@ This IPR should represent our last touch-point before you finalize your project.
 4. Your assessment of the validity conditions: This is important if you are going to make statistical inference from your sample data set.
 5. Anything else you feel is important!
 
-You aren't required to use Markdown for this presentation but feel free to if you'd like.
+You aren't required to use *R* for this presentation but feel free to if you'd like.
 
 Expect to give these to the class as a whole and your briefing should take between 5 to 7 minutes. If you'd like to pre-record, I'm ok with that just be ready to show the video in the class period set aside for IPR 2. This is a group event.
 

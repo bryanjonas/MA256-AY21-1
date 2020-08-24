@@ -46,3 +46,9 @@ geyser %>%
   labs(x = "Time (m)", y = "Eruption Type", title = "Time Between Eruptions vs. Eruption Type")
 ```
 These two visualizations allow us to gain some information about the relationship between this two variables in our sample. We can now describe the shape, center, variability, and unusual observations for each group in the histogram.  The side-by-side boxplot can provide very similar information but in a different, and perhaps easier to understand form. Please reference Section 6.1 for more information about the specific parts of the boxplot.
+
+We can quickly create a five-number summary in R using the **summary()** function:
+
+```{r}
+  summary(geyser)
+```
