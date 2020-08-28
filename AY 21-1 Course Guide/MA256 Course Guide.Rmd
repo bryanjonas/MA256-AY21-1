@@ -155,7 +155,6 @@ There are a lot of resources available to you on the internet on the topics we w
 ### Before Class Activities:
 * Read: *Introduction to Statistical Investigations* - Chapter 1
 * Watch: WileyPlus - Videos 1.5.1 - 1.5.3
-* Do: *Introduction to Statistical Investigations* - Exploration 1.4
 * Do: Submit your work from **Lesson 4** before the start of class.
 * Do: Follow the **Lesson 5 Companion** document on GitHub.
 
