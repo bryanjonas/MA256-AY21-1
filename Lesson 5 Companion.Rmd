@@ -155,7 +155,7 @@ sqrt((null_prop * (1 - null_prop)) / sample_size)
 
 The values from our simulated null distribution and those dictated by the CLT are pretty close. Hopefully this was enough to convince you of the magic of the central limit theorem but I'm going to overlay the normal distribution on the simulated null distribution as a parting *R* flex.
 ```{r}
-#Standard debiation dictated by the CLT
+#Standard deviation dictated by the CLT
 CLT_sd = sqrt((null_prop * (1 - null_prop)) / sample_size)
 
 replications_dataframe %>%
