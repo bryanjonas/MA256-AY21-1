@@ -502,17 +502,30 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 
 \newpage
 
-## Lesson 28: Continuous Distributions
+## Lesson 28: Writer's Workshop
+
+### Objectives:
+* Allow students to gain the benefits of peer reviews of their writing
+
+### Before Class Activities:
+* You are expected to bring a good draft of your paper to this workshop.
+* The more effort you put into this exercise, the more you will get out of it!
+
+### After Class Activities:
+* Finalize course project report.
+
+\newpage
+
+## Lesson 29: Continuous Distributions
 
 <!-- ### Objectives: -->
 
 <!-- ### Before Class Activities: -->
 
 <!-- ### After Class Activities: -->
-
 \newpage
 
-## Lesson 29: Course Project Presentations
+## Lesson 30: Course Project Presentations
 
 ### Objectives:
 * Present your course projects!
@@ -524,16 +537,4 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 ### After Class Activities:
 * Prepare for the course review.
 
-\newpage
-
-## Lesson 30: Course Review
-
-### Objectives:
-* Review concepts discussed in the course
-
-### Before Class Activities:
-* Course review organization will be determined closer to the end of the semester.
-
-### After Class Activities:
-* Study for the TEE!
 
