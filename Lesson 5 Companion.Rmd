@@ -100,7 +100,7 @@ ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
                 args = list(mean = 0, sd = 1)) +
   stat_function(fun = dnorm, 
                 args = list(mean = 0, sd = 1), 
-                xlim = c(-3, -0.5), #This is (-3, 0) for the purposes of plotting.
+                xlim = c(-3, -0.5), #This is (-3, 0.5) for the purposes of plotting.
                 geom = "area", fill = "red") +
   labs(x = "", y = "") + theme_classic() +
   scale_y_continuous(breaks = NULL)
