@@ -17,6 +17,8 @@ Remember our research question is whether children are more likely to choose can
 $H_{0}: \pi = 0.5$  
 $H_{a}: \pi \neq 0.5$
 
+Note: I'm making this a two-sided test for the purposes of showing you the two-sided code which is more complicated than the one-sided. I would normally approach this using a one-sided test because we are interested in if children are **more** likely to choose candy over toys (so greater than by random chance).
+
 ```{r}
 library(tidyverse)
 ```
@@ -49,9 +51,9 @@ for (i in 1:num_reps){
 ```
 After turning on the awesome, this code sets up several "parameters" for our simulation. This is "parameter" in the general sense, not to be confused with statistical parameters. We create a data frame, or storage spot, to put our simulated proportions. We then define the number of repetitions (1000), the size of each simulated repetitions (283), the null probability (null hypothesis of random choice between two options), and the sample statistic (what we observed in our experiment). 
 
-What follows is a **for** loop that serves as the "simulation" in our experiment. The code here is a bit more advanced but nothing insurmountable. The variable *trial* is basically a list of size 12 (sample size) of ones and zeros. This list is populated using the **sample** function which chooses from the vector we give it in *x* with the probability of each elements being chosen as defined by the *prob* parameter in the function. Said another way: the function will choose *1* with a probability of *null_prob* and *0* with the probability of *1-null_prob*. Finally, we need to sample *with replacement* otherwise you can't get twelve numbers out of a list of two.
+What follows is a **for** loop that serves as the "simulation" in our experiment. The code here is a bit more advanced but nothing insurmountable. The variable *trial* is basically a list of size 283 (sample size) of ones and zeros. This list is populated using the **sample** function which chooses from the vector we give it in *x* with the probability of each elements being chosen as defined by the *prob* parameter in the function. Said another way: the function will choose *1* with a probability of *null_prob* and *0* with the probability of *1-null_prob*. Finally, we need to sample *with replacement* otherwise you can't get 283 numbers out of a list of two.
 
-We calculate the proportion of scissors (ones) in our vector by summing the elements of the vector (again, a bunch of ones and zeros) and dividing by the sample size. Finally, we take this *trial_proportion* and "bind" it to the end of our big list of simulated proportions. What we are left with is 1000 proportions that are simulated under the assumption that the probability of picking scissors is 1/3... the null hypothesis. We can visualize the distribution of these numbers using a histogram.
+We calculate the proportion of "candy choices" (ones) in our vector by summing the elements of the vector (again, a bunch of ones and zeros) and dividing by the sample size. Finally, we take this *trial_proportion* and "bind" it to the end of our big list of simulated proportions. What we are left with is 1000 proportions that are simulated under the assumption that the probability of picking candy is 1/2... the null hypothesis. We can visualize the distribution of these numbers using a histogram.
 
 ```{r}
 #Calculate how far away from the null proportion
