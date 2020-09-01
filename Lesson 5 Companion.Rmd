@@ -134,6 +134,12 @@ ggplot(data.frame(x = c(3.5, 6.5)), aes(x = x)) +
 pnorm(4.5, mean = 5, sd = 0.5)
 ```
 
+### Interpreting our result:
+
+So our p-value from the theory-based test was 0.440 which means that, given the truth of the null hypothesis, the probability of obtaining a results at least as extreme as our sample statistic is 0.440. This means that if the children are choosing my random chance, this outcome seems to happen a lot! It is natural then that this sample provides little to no evidence against the null hypothesis. It is very plausible that the children are choosing candy or a toy randomly. 
+
+The large sample size of this experiment makes me fairly confident in the results of our test. The only challenge I face is that the researchers only used neighborhoods in Connecticut for their sample. One could make the argument that this introduces some bias into the sampling method (perhaps children from Connecticut are significantly different than other states) but I believe, in this circumstance, American children are fairly homogeneous in their choices. I am comfortable generalizing these results to the American population as a whole. 
+
 ### Why can we use the theory-based test?:
 
 In using the theory-based test we are relying on the central limit theorem (CLT) that tells us: "as long as our sample size is big enough, our sample proportions will be approximately normally distributed." So we have to be cognizant of our sample size to use the CLT... sound familiar? Hopefully you recognize that our validity conditions for the theory-based test help satisfy our sample size requirement.
