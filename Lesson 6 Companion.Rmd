@@ -77,7 +77,7 @@ upper = sample_stat + 2 * standard_error
 #Fancier than you need 
 paste("(",lower, ",", upper, ")")
 ```
-We can interpret this to say: "I am 95% confident that the true proportion of children who prefer candy over toys is between 46.4% and 58.2%. Remember our confidence interval gives a range of plausible values for our parameter.
+We can interpret this to say: "I am 95% confident that the true proportion of children who prefer candy over toys is between 46.4% and 58.2%." Remember our confidence interval gives a range of plausible values for our parameter.
 
 However, since we have learned that the central limit theory applies to sample proportions (as long as we meet the validity conditions), we could use the normal distribution to represent the above distribution and make our life a lot easier.
 ```{r}
