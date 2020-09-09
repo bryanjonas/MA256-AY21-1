@@ -99,7 +99,7 @@ sim_data %>%
     color = "red")
 ```
 
-Clearly this isn't the world's worst fit becuase we were using a subset of the data that wasn't horrendously skewed in the first place; however, you will notice a slight skewness in the simulated null distribution. I'm going to repeat the process but now I'm going to use the entire dataset to ensure we meet the validity conditions. Here is what the distribution of our groups looks like now.
+Clearly this isn't the world's worst fit because we were using a subset of the data that wasn't horrendously skewed in the first place; however, you will notice a slight skewness in the simulated null distribution. I'm going to repeat the process but now I'm going to use the entire dataset to ensure we meet the validity conditions. Here is what the distribution of our groups looks like now.
 
 ```{r}
 IOCT %>%
