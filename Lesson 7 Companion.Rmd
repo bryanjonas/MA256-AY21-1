@@ -33,7 +33,7 @@ new_population = do.call("rbind", replicate(10, estimates, simplify = FALSE))
 
 null_mean = 10
 
-new_population = new_population - abs(mean(new_population$Time) - 10)
+new_population$Time = new_population$Time - abs(mean(new_population$Time) - null_mean)
 
 p1 <- estimates %>%
   ggplot(aes(x = Time)) +
