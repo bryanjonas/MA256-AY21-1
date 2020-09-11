@@ -49,7 +49,7 @@ You may recall seeing a very similar CI supplied by our **t.test()** function la
 ```{r}
 null_mean = 10
 
-t.test(estimates, mu = null_mean, alternative = "two.sided", conf.level = 0.95)
+t.test(estimates$Time, mu = null_mean, alternative = "two.sided", conf.level = 0.95)
 ```
 
 ### Practical importance:
