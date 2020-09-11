@@ -4,3 +4,4 @@
 .Ruserdata
 *_files*/
 *cache*/
+*.csv*
