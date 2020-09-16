@@ -50,7 +50,7 @@ This means that, according to this model, for every one hour **increase** of non
 
 The last thing I want to point out on this summary output right now are the two r-squared values: *Multiple R-squared* and *Adjusted R-Squared*. For the purposes of this class (and your project) you will use multiple R-squared as it is the "normal" coefficient of determination discussed in your book. The adjusted R-squared is useful in predictive modeling contexts where you would like to "penalize" a model for over complication. If I'm trying to predict the GPA of a student and one model has three explanatory variables and an $R^{2}$ of 0.71 and another model has 10 explanatory variables and an $R^{2}$ of 0.72, I would prefer to use the less complicated model... even if accounts for less of the variation in the response variable. You would (usually) find that the adjusted R-squared would be lower for this more complicated second model given there is not much of a difference between the multiple r-squared values.
 
-Now that we have identified our sample statistic ($B_{1}$) for our approaches, we will continue.
+Now that we have identified our sample statistic ($\beta_{1}$) for our approaches, we will continue.
 
 ### Simulation-based approach:
 
@@ -120,8 +120,8 @@ model %>%
   geom_histogram() +
   labs(x = "Residuals", y = "Count",
        title = "Distribution of Residuals") +
-  geom_vline(xintercept = 2 * sd_resid, color = "red") +
-  geom_vline(xintercept = -2 * sd_resid, color = "red")
+  geom_vline(xintercept = 2 * sd_resid, color = "blue") +
+  geom_vline(xintercept = -2 * sd_resid, color = "blue")
 ```
 While there are appear to be two outlying residuals (something we would have expected based on our data exploration) the vast majority of the residual values falls within two standard deviations of the mean (0). Furthermore, the histogram appears to be uni-model with the mode located in the center of the distribution.
 
@@ -133,14 +133,11 @@ Another thing that it is easy to lose track of in the course is what exactly is 
 #Sum of squared error
 estimate = model$fitted.values
 observed = GPA$gpa
-
 sse = sum((observed - estimate)^2)
 
 #Sum of squares
 average_hours = mean(GPA$hours)
-
 ss = sum((GPA$hours - average_hours)^2)
-
 sample_size = nrow(GPA)
 
 #Standard Error of Slope
@@ -155,7 +152,7 @@ That was a lot of work to get a test statistic that matched what was already in 
 ```{r}
 2 * (1 - pt(abs(tstat), df = sample_size - 2))
 ```
-Once again, we can see that this p-value is already present in our model's summary output. You will notice that the degree of freedom parameter is *n*-2 this time instead of *n*-1. This is because we lose a degree of freedom for each predictor in our model. Read more about degrees of freedom here: https://statisticsbyjim.com/hypothesis-testing/degrees-freedom-statistics/
+Once again, we can see that this p-value is already present in our model's summary output. You will notice that the degree of freedom parameter is *n*-2 this time instead of *n*-1. This is because we lose a degree of freedom for each predictor in our model. Read more about degrees of freedom on my document on GitHub or here: https://statisticsbyjim.com/hypothesis-testing/degrees-freedom-statistics/
 
 For the purposes of our class, you don't need to go through calculating your p-value by hand, trusting the summary output is enough. However, being able to identify the actual theory-based test and understanding the process is very important to linear regression and further concepts in the course.
 
@@ -171,7 +168,7 @@ This may feel a little disappointing but also not unexpected from our data explo
 
 You probably remember that the *b* in your favorite equation (*y = mx + b*) is the y-intercept or constant in our linear model. So why didn't we spend any time interpreting it when we interpreted the other coefficient? Well, the primary reason is that I built this model because I was interested in the association between non-academic time and GPA. This question is answered using the coefficient and p-value for that variable. 
 
-Another reason is that interpreting the constant can be fraught with issues: Perhaps $x_{n} = 0$ falls outside your data set for all values of *n*? Perhaps $x_{n} = 0$ has no meaning such as for a weight or height variable? These are just a couple examples of why I don't waste too much time considering the intercept constant. 
+Another reason is that interpreting the constant can be fraught with issues: Perhaps $x_{n} = 0$ falls outside your data set for all values of *n*? Perhaps $x_{n} = 0$ has no practical meaning such as for a weight or height variable? These are just a couple examples of why I don't waste too much time considering the intercept constant. 
 
 If you did want to consider it for this problem, we would say that the student who spends zero hours on non-academic activities will average a 3.597 GPA. That hardly seems worth it to me.
 
