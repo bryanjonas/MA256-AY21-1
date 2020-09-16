@@ -50,7 +50,7 @@ This means that, according to this model, for every one hour **increase** of non
 
 The last thing I want to point out on this summary output right now are the two r-squared values: *Multiple R-squared* and *Adjusted R-Squared*. For the purposes of this class (and your project) you will use multiple R-squared as it is the "normal" coefficient of determination discussed in your book. The adjusted R-squared is useful in predictive modeling contexts where you would like to "penalize" a model for over complication. If I'm trying to predict the GPA of a student and one model has three explanatory variables and an $R^{2}$ of 0.71 and another model has 10 explanatory variables and an $R^{2}$ of 0.72, I would prefer to use the less complicated model... even if accounts for less of the variation in the response variable. You would (usually) find that the adjusted R-squared would be lower for this more complicated second model given there is not much of a difference between the multiple r-squared values.
 
-Now that we have identified our sample statistic ($\beta_{1}$) for our approaches, we will continue.
+Now that we have identified our sample statistic ($\hat{\beta_{1}}$) for our approaches, we will continue.
 
 ### Simulation-based approach:
 
@@ -101,7 +101,7 @@ First we need to verify that we meet our validity conditions. Check out my docum
 model %>%
   ggplot(aes(x = .fitted, y = .resid)) +
   geom_point() +
-  labs(x = "Fitted", y = "Residuals vs. Fitted",
+  labs(x = "Fitted", y = "Residuals",
        title = "Residuals vs. Fitted") +
   geom_hline(yintercept = 0)
 ```
