@@ -15,11 +15,11 @@ I will be utilizing the data from the GPA vs. non-academic time data set from se
 ```{r}
 library(tidyverse)
 
-GPA = read_table2("http://www.isi-stats.com/isi/data/chap10/GPA.txt")
+time_gpa = read_table2("http://www.isi-stats.com/isi/data/chap10/GPA.txt")
 
-head(GPA)
+head(time_gpa)
 
-GPA %>%
+time_gpa %>%
   ggplot(aes(x = hours, y = gpa)) +
   geom_point() +
   labs(x = "Non-academic time (h)", y = "GPA", title = "GPA vs. Non-Academic Time")
@@ -33,7 +33,7 @@ $H_{a}:$ There is an association ($\beta_{1} \neq 0$)
 
 Now let's find the sample statistic we will use for our approaches. In this case, we will utilize the slope of the least squares regression line as our statistic. First a brief exploration of the **lm()** function in *R*. You will use **lm()** a lot in this course, you will learn to love it, and you will miss it when you leave the course. Like a lot of functions in *R*, it automates a lot of your work and provides more information than you know what to do with. Let's start by building a **l**inear **m**odel for our research question.
 ```{r}
-model = lm(GPA$gpa ~ GPA$hours)
+model = lm(time_gpa$gpa ~ time_gpa$hours)
 
 summary(model)
 
@@ -67,11 +67,11 @@ for (i in 1:num_reps){
   #Produce a new dataframe (scrambled_GPA) with a new column
   #that contains scrambled GPAs by sampling the original w/o
   #replacement.
-  scrambled_GPA = GPA %>%
-    mutate(new_GPA = sample(gpa, size = n(), replace = FALSE))
+  scrambled_time_gpa = time_gpa %>%
+    mutate(new_gpa = sample(gpa, size = n(), replace = FALSE))
   
   #Produce model with this new_GPA but just pull out the slope
-  trial_slope = lm(scrambled_GPA$new_GPA ~ scrambled_GPA$hours)$coefficients[[2]]
+  trial_slope = lm(scrambled_time_gpa$new_gpa ~ scrambled_time_gpa$hours)$coefficients[[2]]
   
   #Add it to my list of simulated slopes
   replications_dataframe = rbind(replications_dataframe, data.frame(trial_slope))
@@ -132,13 +132,13 @@ Another thing that it is easy to lose track of in the course is what exactly is 
 ```{r}
 #Sum of squared error
 estimate = model$fitted.values
-observed = GPA$gpa
+observed = time_gpa$gpa
 sse = sum((observed - estimate)^2)
 
 #Sum of squares
-average_hours = mean(GPA$hours)
-ss = sum((GPA$hours - average_hours)^2)
-sample_size = nrow(GPA)
+average_hours = mean(time_gpa$hours)
+ss = sum((time_gpa$hours - average_hours)^2)
+sample_size = nrow(time_gpa)
 
 #Standard Error of Slope
 standard_error = sqrt( ((1 / (sample_size - 2)) * sse) / ss)
