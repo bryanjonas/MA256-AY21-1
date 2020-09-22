@@ -262,7 +262,7 @@ There are a lot of resources available to you on the internet on the topics we w
 
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 12**. One submission per group.
+* Review multiple regression reading and companion to help prepare for your midterm.
 
 \newpage
 
@@ -271,7 +271,7 @@ There are a lot of resources available to you on the internet on the topics we w
 ### Objectives:
 * Understand the motivation for including interaction terms in causal models
 * Understand and apply the interpretation of coefficients for interaction terms
-* Build multiple liunear regression model in *R*
+* Build multiple linear regression model in *R*
 
 ### Before Class Activities:
 * Read: *Advanced Statistical Investigations With Probability* - Chapter 4.4

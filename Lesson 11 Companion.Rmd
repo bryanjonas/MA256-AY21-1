@@ -32,7 +32,7 @@ You will notice the the arrow between *height* and *weight* has been reversed fr
 
 Now let's consider *sex* as a confounding variable:
 
-![Sex as a Confounding Varialbe](Images/ConfCausal.PNG)
+![Sex as a Confounding Variable](Images/ConfCausal.PNG)
 
 Is it logical to say that *sex* has an effect on *height*? Well as most of those complaining about being "too short for the IOCT" seem to be of the female persuasion, I would say that is likely. Can we also say that *sex* has an effect on *IOCT Time*? Well, it's nothing I've explored yet but that seems to make a lot more sense than *IOCT Time* having an effect on *sex*.
 
