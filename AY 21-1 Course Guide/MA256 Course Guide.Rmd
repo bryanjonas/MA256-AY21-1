@@ -100,7 +100,7 @@ There are a lot of resources available to you on the internet on the topics we w
 * Do: Prepare the three research questions referenced in **Lesson 1 - After Class Activities**.
 
 ### After Class Activities:
-* Pick one of your group's research questions and prepare a literature review for at least two scholarly articles. One submission per group. This will be due at the start of **Lesson 4**.
+* Pick one of your group's research questions and prepare a literature review for at least two scholarly articles. One submission per group. This will be due at at 0800 on the day of **Lesson 4**.
 
 \newpage
 
@@ -138,7 +138,7 @@ There are a lot of resources available to you on the internet on the topics we w
 * Do: Literature review from **Lesson 2** is due before the start of class.
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 5**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 5**. One submission per group.
 
 \newpage
 
@@ -175,7 +175,7 @@ There are a lot of resources available to you on the internet on the topics we w
 * Do: Follow the **Lesson 6 Companion** document on GitHub.
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 7**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 7**. One submission per group.
 
 \newpage
 
@@ -210,7 +210,7 @@ There are a lot of resources available to you on the internet on the topics we w
 * Do: Follow the **Lesson 8 Companion** document on GitHub.
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 9**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 9**. One submission per group.
 
 \newpage
 
@@ -244,7 +244,7 @@ There are a lot of resources available to you on the internet on the topics we w
 * Do: Follow the **Lesson 10 Companion** document on GitHub.
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 11**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 11**. One submission per group.
 
 \newpage
 
@@ -281,17 +281,13 @@ There are a lot of resources available to you on the internet on the topics we w
 
 ### After Class Activities:
 * Study for your midterm!
+* Finalize exercise from class today. It is due before 0800 on the day of **Lesson 14**.
 
 \newpage
 
 ## Lesson 13: Midterm
 
-### Exam Instructions: This exam will present you with a data set and a set of questions to answer about that data set. The expectation is that
-you will use the knowledge and experience gained as a student in MA256 to carefully and completely answer each question.
-You are authorized to use outside resources on this exam; however, over-reliance on a particular outside resource may
-result in reduced academic credit. The expectation is that you will utilize the methods taught in this course to answer the
-questions presented. Utilizing methods gathered from external sources may augment but will not replace the demonstration
-of your mastery of the primary course material.
+### Exam Instructions: This exam will present you with a data set and a set of questions to answer about that data set. The expectation is that you will use the knowledge and experience gained as a student in MA256 to carefully and completely answer each question. You are authorized to use outside resources on this exam; however, over-reliance on a particular outside resource may result in reduced academic credit. The expectation is that you will utilize the methods taught in this course to answer the questions presented. Utilizing methods gathered from external sources may augment but will not replace the demonstration of your mastery of the primary course material.
 
 This WPR will be released from academic security on 02 OCT 2020. You may not discuss any aspects of this exam with anyone except your instructor.
 
@@ -323,7 +319,7 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 * Review: *Introduction to Statistical Investigations* - Chapter 5
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 16**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 16**. One submission per group.
 
 \newpage
 
@@ -370,7 +366,7 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 * Review: *Introduction to Statistical Investigations* - Chapter 6
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 19**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 19**. One submission per group.
 
 \newpage
 
@@ -418,7 +414,7 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 * Review: *Introduction to Statistical Investigations* - Chapter 8
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 22**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 22**. One submission per group.
 
 \newpage
 
@@ -448,7 +444,7 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 * Review: *Introduction to Statistical Investigations* - Chapter 9
 
 ### After Class Activities:
-* Finalize your work from class. Submission is due before the start of **Lesson 24**. One submission per group.
+* Finalize your work from class. Submission is due before 0800 on the day of **Lesson 24**. One submission per group.
 
 \newpage
 
