@@ -87,8 +87,6 @@ As we two explanatory variables in this question, we have two sets of hypotheses
 $H_{0}:$ Controlling for sex, there is no association between height and IOCT time ($\beta_{1} = 0$)  
 $H_{a}:$ Controlling for sex, there is an association between height and IOCT time ($\beta_{1} \neq 0$)
 
-Our model summary states that the p-value for our height slope parameter estimate ($\beta_{1}$) is 0.612 which means we have little to no evidence against the null hypothesis. This suggests we can not make the inference that there is an association between height and IOCT time from this sample.
-
 **Sex**
 
 $H_{0}:$ Controlling for height, there is no association between sex and IOCT time ($\beta_{2} = 0$)  
@@ -116,7 +114,7 @@ If sex is fixed, for every one inch increase in height, we expect a 0.3966 secon
 
 How did I know that "0" was *female* and "1" was *male* for our model? Well, as you know from your reading, there are two different types of encoding for categorical variables in the regression: indicator and effects. *R* uses indicator encoding meaning that it chooses an indicator variable(s) (**IOCT$sexM** in this case) to represent your categories. You'll probably hear me call this "one-hot encoding" because I'm most familiar with it in machine learning contexts. It's probably not strictly "one-hot encoding" but it's close. Here is an example:
 
-Let's say you variable is *color* and it has four value: red, white, blue, green. To represent these four categories using indicator variables in our model we would use three indicator variables: **colorR**, **colorW**, **colorB**. How can three variables represent four categories? Check out the table below:
+Let's say you variable is *color* and it has four values: red, white, blue, green. To represent these four categories using indicator variables in our model we would use three indicator variables: **colorR**, **colorW**, **colorB**. How can three variables represent four categories? Check out the table below:
 
 |       | colorR | colorW | colorB |
 |-------|--------|--------|--------|
@@ -185,3 +183,36 @@ Our model summary states that the p-value for our sex slope parameter estimate (
 
 For height, the p-value is 0.612 which means there is little to no evidence against the null hypothesis. This means that, controlling for sex, this sample doesn't provide evidence to discount that there is no association between height and IOCT time. Does this mean that all the cadets who complain about the IOCT being unfair for short people are wrong? You may have heard the phrase "absence of evidence is not evidence of absence." What this means in this context is that we don't have evidence against the null hypothesis, but this isn't evidence of a lack of association. Further exploration could include composing confidence intervals for your slope parameters and/or collecting a different sample of data and repeating your analysis.
 
+### Confidence intervals
+
+**For the height parameter**:
+```{r}
+beta_1 = -0.3966 
+
+t_crit = abs(qt(0.025, df = nrow(IOCT) - 2))
+
+standard_error = 0.7818
+
+lower = beta_1 - t_crit * standard_error
+
+upper = beta_1 + t_crit * standard_error
+
+paste("(", lower, ",", upper, ")")
+```
+
+**For the sex parameter**:
+```{r}
+beta_2 = -80.1894 
+
+t_crit = abs(qt(0.025, df = nrow(IOCT) - 2))
+
+standard_error = 6.2191
+
+lower = beta_1 - t_crit * standard_error
+
+upper = beta_1 + t_crit * standard_error
+
+paste("(", lower, ",", upper, ")")
+```
+
+Why these confidence intervals shouldn't suprise us in the fact that one of them contains zero and the other doesn't, they do provide further insight into plausible values for our height slope parameter. While the sample does not provide evidence against the null hypothesis, the confidence interval suggests that it is plausible that there is an association between height and IOCT time. We see that it is plausible that this association is positive or negative and also that it's fairly slight: (at a "maximum") for every one inch increase in height, we expect a 1.4 (1.9) second increase (decrease) in IOCT time. I suppose for those short cadets, those extra seconds matter but it's not a huge effect in the grand scheme of things.
