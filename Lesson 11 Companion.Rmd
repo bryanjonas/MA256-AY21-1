@@ -10,9 +10,9 @@ knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 
 ### Identifying confounding variables:
 
-For this example I am going to use the IOCT dataset available in the files tab on our course Teams. 
+For this example I am going to use the IOCT data set available in the files tab on our course Teams. 
 
-Every semester when I bring up this dataset, I get several cadets discuss how unfair the IOCT is for the height-impaired among us. I'm not a particularly tall person but I never had any issues with the IOCT so I feel it's best to let the data decide if these complaints have merits. Let's start with a research question: What is the association between heigh and IOCT Time?
+Every semester when I bring up this data set, I get several cadets discuss how unfair the IOCT is for the height-impaired among us. I'm not a particularly tall person but I never had any issues with the IOCT so I feel it's best to let the data decide if these complaints have merits. Let's start with a research question: What is the association between height and IOCT Time?
 
 I like to draw causal diagrams when I look start looking at research questions and I find these are particularly important when I think that linear regression is going to be my approach.
 
@@ -22,13 +22,13 @@ One of the purposes of this diagram is to identify any potential confounding var
 
 ![Considering a Confouding Variable](images/QuestCausal.PNG)
 
-Is there a variable ("x") that we could put in the third bubble that you would say "x" has an effect on *height* and an effect on *IOCT Time*? Ordinarily, you would be compose this diagram at the same time as designing your experiment or observational study. This would allow you to indentify all the variables that it is important for you to collect data on. Obviously, as we are using a pre-assembled dataset, we won't be able to add any variables not available in the dataset so let's consider some of those. After looking at the dataset, I want to discuss two possibilites: *weight* and *sex*. 
+Is there a variable ("x") that we could put in the third bubble that you would say "x" has an effect on *height* and an effect on *IOCT Time*? Ordinarily, you would be compose this diagram at the same time as designing your experiment or observational study. This would allow you to identify all the variables that it is important for you to collect data on. Obviously, as we are using a pre-assembled data set, we won't be able to add any variables not available in the data set so let's consider some of those. After looking at the data set, I want to discuss two possibilities: *weight* and *sex*. 
 
 First let's consider *weight*. I'm added *weight* to the causal diagram below a long with the arrows that I think best dictate the relationship between the variables.
 
 ![Mediator Variable](images/MedCausal.PNG)
 
-You will notice the the arrow between *height* and *weight* has been reversed my the previous diagram. It seems to me that the "common sense" direction of this association is that *height* has an effect on *weight* and not the other way around. Could there be a relationship in the other direction? I suppose, but it seems much more likely that how tall you are provides the baseline for how much you are going to weigh. This means that *weight* is not likely a confounding variable and can be called a "mediator" (or one of the numerous other terms that are used depending on your statistical specialty).
+You will notice the the arrow between *height* and *weight* has been reversed from my the previous diagram. It seems to me that the "common sense" direction of this association is that *height* has an effect on *weight* and not the other way around. Could there be a relationship in the other direction? I suppose, but it seems much more likely that how tall you are provides the baseline for how much you are going to weigh. This means that *weight* is not likely a confounding variable and can be called a "mediator" (or one of the numerous other terms that are used depending on your statistical specialty).
 
 Now let's consider *sex* as a confounding variable:
 
@@ -36,7 +36,7 @@ Now let's consider *sex* as a confounding variable:
 
 Is it logical to say that *sex* has an effect on *height*? Well as most of those complaining about being "too short for the IOCT" seem to be of the female persuasion, I would say that is likely. Can we also say that *sex* has an effect on *IOCT Time*? Well, it's nothing I've explored yet but that seems to make a lot more sense than *IOCT Time* having an effect on *sex*.
 
-Now that we've identified a confounding variable we can now consider how to deal with it. Remember, because it is a confounding variable, we can say: the effects of *sex* on *IOCT Time* can not be seperated from the effects of *height*. This feel rather final... like there isn't anything we can do about it. Except there is! We can control for this confounding variable by including as a covariate in our regression model. I know that sounds complicated but it's really not.
+Now that we've identified a confounding variable we can now consider how to deal with it. Remember, because it is a confounding variable, we can say: the effects of *sex* on *IOCT Time* can not be separated from the effects of *height*. This feel rather final... like there isn't anything we can do about it. Except there is! We can control for this confounding variable by including as a covariate in our regression model. I know that sounds complicated but it's really not.
 
 Before we build the model, however, let's do some exploratory data analysis.
 
@@ -53,7 +53,7 @@ IOCT %>%
   labs(x = "Height (in)", y = "IOCT Time (s)",
        title = "IOCT Time vs. Height")
 ```
-Considering this scatter plot, I would say there is a moderate negative linear relationship between *height* and *IOCT Time*. There are several unusual datapoints, however, the cadet with the *IOCT Time* of over 600 seconds is probably going to be influential in it's effect on the slope of our regression line.
+Considering this scatter plot, I would say there is a moderate negative linear relationship between *height* and *IOCT Time*. There are several unusual data points, however, the cadet with the *IOCT Time* of over 600 seconds is probably going to be influential in it's effect on the slope of our regression line.
 
 ```{r}
 IOCT %>%
@@ -62,7 +62,7 @@ IOCT %>%
   labs(x = "Sex", y = "IOCT Time (s)",
        title = "IOCT Time vs. Sex")
 ```
-This boxplot demonstrates that the median male time is sizably lower than the median female time. It also shows that that the variability of the male time is also a lot less. We can also identify that our influential point is a female cadet.
+This box plot demonstrates that the median male time is noticably lower than the median female time. It also shows that that the variability of the male time is also a lot less. We can also identify that our influential point is a female cadet.
 
 ```{r}
 IOCT %>%
@@ -78,6 +78,21 @@ There isn't a lot of additional information gained from this plot but I wanted t
 Another common thread of questions when we utilize this data set is what to do about the outlier. I'm sure the lady who recorded the over 10-minute time on the IOCT is a great person, but her data point is really cramping my modeling style. Can't we just remove it then? Well, in true statistics fashion, I'm going to answer this question with a set of other questions: Do you think there was a data collection error for this data point? Assuming not, what are you sacrificing by removing this cadet's time? If you start removing data points because you don't like them, where will the madness end?
 
 I think these are all important questions to consider before you think about removing data points. As for me, unless there was a clear measurement error (like a weight of five pounds for a cadet), I like to leave them in until I've assessed their impact on my model.
+
+### Hypothesis:
+As we two explanatory variables in this question, we have two sets of hypotheses that we are testing. Notice that we use language to describe "controlling" for the other variable when we define these hypotheses.
+
+**Height**
+
+$H_{0}:$ Controlling for sex, there is no association between height and IOCT time ($\beta_{1} = 0$)  
+$H_{a}:$ Controlling for sex, there is an association between height and IOCT time ($\beta_{1} \neq 0$)
+
+Our model summary states that the p-value for our height slope parameter estimate ($\beta_{1}$) is 0.612 which means we have little to no evidence against the null hypothesis. This suggests we can not make the inference that there is an association between height and IOCT time from this sample.
+
+**Sex**
+
+$H_{0}:$ Controlling for height, there is no association between sex and IOCT time ($\beta_{2} = 0$)  
+$H_{a}:$ Controlling for height, there is an association between sex and IOCT time ($\beta_{2} \neq 0$)
 
 ### Multiple linear regression:
 
@@ -112,11 +127,11 @@ Let's say you variable is *color* and it has four value: red, white, blue, green
 
 As you can see, at most one indicator variable is "hot" (value of 1) at at a time. We can represent our fourth category by turning them all "cold." You can also see that "red" is represented by **colorR** being hot... this how I knew that "male" was 1 for the indicator variable in our regression model.
 
-This indicator encoding is why I also caution you to try to stick with quantitative variables for your project. You can see how adding a few categorical variabls with a few categories each can add a lot of terms to your model very quickly. Add the categorical variables that you need to for your research question... just be smart about it.
+This indicator encoding is why I also caution you to try to stick with quantitative variables for your project. You can see how adding a few categorical variables with a few categories each can add a lot of terms to your model very quickly. Add the categorical variables that you need to for your research question... just be smart about it.
        
 ### Statistical inference
 
-Now that we have built a multiple regression model we have slope estimates that depict the association between the variables in our sample. What can we say about the true relationship between these variables? I always prefer to use the theory-based approach (especially considering the model summary provides us the p-values) but we need to check the validity conditions first.
+Now that we have built a multiple regression model we have slope estimates that depict the association between the variables in our sample. What can we say about the true relationship between these variables? I always prefer to use the theory-based approach (especially considering the model summary provides us the p-values) but we need to check the **validity conditions** first.
 
 **L**inearity and **E**qual Variance:
 ```{r}
@@ -129,7 +144,7 @@ model %>%
 ```
 Full stop! If you see this sort of output on one of your diagnostic plots, you have an issue and should investigate it further. How? We'll talk more about this next class but, for now, let's finish with out validity conditions.
 
-**I**ndepdence:
+**I**ndependence:
 
 I believe it is reasonable to assume that the height, sex, and IOCT time of one cadet is independent of another cadet.
 
@@ -156,21 +171,17 @@ paste("Within 3SD:", (sd_count[1,2] + sd_count[2,2] + sd_count[3,2]) / nrow(IOCT
 ```
 While we see a higher distribution of points within one standard deviation than we'd expect, these value match our "68-95-99 Rule" fairly well. Much better than I expected by looking at the histogram by itself. Here is a perfect example that, just because you have outliers, doesn't mean your residuals are normally distributed.
 
-In totality, except for the first diagnotic plot, our validity conditions look pretty good. I have a good idea what is going on with the first plot but I'm not going to tell you until next lesson on interaction terms. For the purposes of discussing the p-values, let's **assume** that our validity conditions are met.
+In totality, except for the first diagnostic plot, our validity conditions look pretty good. I have a good idea what is going on with the first plot but I'm not going to tell you until next lesson on interaction terms. For the purposes of discussing the p-values, let's **assume** that our validity conditions are met.
 
-Before we can interpret the p-values, we need to have our hypothesis.
+### Theory-based approach:
 
-**Height**
+Because you are all seasoned statisticians, I'm going to skip right to utilizing the wonderful output of **lm()** to obtain our standardized statistic value (*t*) and our p-value.
 
-$H_{0}:$ Controlling for sex, there is no association between height and IOCT time ($\beta_{1} = 0$)  
-$H_{a}:$ Controlling for sex, there is an association between height and IOCT time ($\beta_{1} \neq 0$)
+```{r}
+summary(model)
+```
 
-Our model summary states that the p-value for our height slope parameter estimate ($\beta_{1}$) is 0.612 which means we have little to no evidence against the null hypothesis. This suggests we can not make the inference that there is an association between height and IOCT time from this sample.
+Our model summary states that the p-value for our sex slope parameter estimate ($\beta_{2}$) is **less than** $2 \times 10^{-16}$ (also known as "basically 0"). This suggests this sample provides very strong evidence against that null hypothesis and, further, suggests there is an association between sex and IOCT time. 
 
-**Sex**
-
-$H_{0}:$ Controlling for height, there is no association between sex and IOCT time ($\beta_{2} = 0$)  
-$H_{a}:$ Controlling for height, there is an association between sex and IOCT time ($\beta_{2} \neq 0$)
-
-Our model summary states that the p-value for our sex slope parameter estimate ($\beta_{2}$) is **less than** $2 \times 10^{-16}$ (also known as "basically 0"). This suggests this sample provides very strong evidence against the null hypothesis and, further, suggests there is an association between sex and IOCT time. 
+For height, the p-value is 0.612 which means there is little to no evidence against the null hypothesis. This means that, controlling for sex, this sample doesn't provide evidence to discount that there is no association between height and IOCT time. Does this mean that all the cadets who complain about the IOCT being unfair for short people are wrong? You may have heard the phrase "absence of evidence is not evidence of absence." What this means in this context is that we don't have evidence against the null hypothesis, but this isn't evidence of a lack of association. Further exploration could include composing confidence intervals for your slope parameters and/or collecting a different sample of data and repeating your analysis.
 
