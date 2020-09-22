@@ -20,7 +20,7 @@ I like to draw causal diagrams when I look start looking at research questions a
 
 One of the purposes of this diagram is to identify any potential confounding variables that we need to include in our analysis. You will recall that confounding variables are those that are "related both to the explanatory and to the response variable in such a way that its effects on the response variable cannot be separated from the effects of the explanatory variable." This can be quite the definition so let's consider a concrete example here:
 
-![Considering a Confouding Variable](images/QuestCausal.PNG)
+![Considering a Confounding Variable](images/QuestCausal.PNG)
 
 Is there a variable ("x") that we could put in the third bubble that you would say "x" has an effect on *height* and an effect on *IOCT Time*? Ordinarily, you would be compose this diagram at the same time as designing your experiment or observational study. This would allow you to identify all the variables that it is important for you to collect data on. Obviously, as we are using a pre-assembled data set, we won't be able to add any variables not available in the data set so let's consider some of those. After looking at the data set, I want to discuss two possibilities: *weight* and *sex*. 
 
@@ -208,9 +208,9 @@ t_crit = abs(qt(0.025, df = nrow(IOCT) - 2))
 
 standard_error = 6.2191
 
-lower = beta_1 - t_crit * standard_error
+lower = beta_2 - t_crit * standard_error
 
-upper = beta_1 + t_crit * standard_error
+upper = beta_2 + t_crit * standard_error
 
 paste("(", lower, ",", upper, ")")
 ```
