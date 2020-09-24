@@ -275,13 +275,11 @@ There are a lot of resources available to you on the internet on the topics we w
 
 ### Before Class Activities:
 * Read: *Advanced Statistical Investigations With Probability* - Chapter 4.4
-* Do: Submit your work from **Lesson 11** before the start of class.
 * Do: Follow the **Lesson 12 Companion** document on GitHub.
 * Do: Submit your project proposal before the start of this lesson. See guidance on course project documents for more information.
 
 ### After Class Activities:
 * Study for your midterm!
-* Finalize exercise from class today. It is due before 0800 on the day of **Lesson 14**.
 
 \newpage
 
