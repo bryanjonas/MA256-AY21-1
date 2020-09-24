@@ -98,7 +98,7 @@ Without the interaction term we would say: if sex is held constant, for every on
 
 **Sex**
 
-Without the interaction term we would say: if height is fixed, males have a 199.660 second faster IOCT time on average. Taking into account our interaction term, we see that this interpretation only applies when height is equal to zero... which doesn't make a lot of sense. This basically invalidates the $B_{2}$ term for our model. Instead, if we wish to get an idea of the association between sex and IOCT time with the interaction term, we would need to substitute some height values, calculate the model prediction, and compare those.
+Without the interaction term we would say: if height is fixed, males have a 199.660 second faster IOCT time on average. Taking into account our interaction term, we see that this interpretation only applies when height is equal to zero... which doesn't make a lot of sense. This basically invalidates the $\beta_{2}$ term for our model. Instead, if we wish to get an idea of the association between sex and IOCT time with the interaction term, we would need to substitute some height values, calculate the model prediction, and compare those.
 
 ### Interpreting the p-values
 
