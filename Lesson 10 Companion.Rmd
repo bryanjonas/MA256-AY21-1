@@ -25,7 +25,7 @@ The process for finding the confidence interval should be very familiar as it lo
 
 $\beta_{1} \pm t^{*} \times SE_{\beta_{1}}$ (from Section 4.2 of *Advanced Statisical Introductions with Probability*)
 
-In the Lesson 9 document I demonstrated the "long way" of finding the standard error of the slope estimate, here I will pull this value from of the model's summary output instead. Let's find a 90% confidence interval for the slope parameter.
+In the Lesson 9 document I demonstrated the "long way" of finding the standard error of the slope estimate, here I will pull this value from of the model's summary output instead. Let's find a 95% confidence interval for the slope parameter.
 
 ```{r}
 model = lm(GPA$gpa ~ GPA$hours)
@@ -42,5 +42,5 @@ upper = beta_1 + t_crit * standard_error
 
 paste("(", lower, ",", upper, ")")
 ```
-From this interval we can say that we are 90% confident that the true slope parameter falls between -0.01209 and 0.00032. Does this make sense? Well if you will recall for our data exploration, there didn't appear to be a strong relationship between our explanatory variable (non-academic time) and response variable (GPA) on the scatter plot of our sample. What sort of true slope would we expect to see if our sample was representative? No association would correspond to a slope of zero and therefore this range of values seems plausible.
+From this interval we can say that we are 95% confident that the true slope parameter falls between -0.01209 and 0.00032. Does this make sense? Well if you will recall for our data exploration, there didn't appear to be a strong relationship between our explanatory variable (non-academic time) and response variable (GPA) on the scatter plot of our sample. What sort of true slope would we expect to see if our sample was representative? No association would correspond to a slope of zero and therefore this range of values seems plausible.
 
