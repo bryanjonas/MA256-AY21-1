@@ -12,7 +12,7 @@ knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 I'm going to use the parent's smoking habit vs. baby's gender example for this document. The research question is: Does a parent's smoking habit have an effect on the gender of their baby? To test this question, scientists collected data on the whether both parents smoked and the gender of their child.
 
 $H_{0}:$ The population proportion of boys born to smoking parents is the same as the population proportion of boys born to nonsmoking parents. Put simply: There is no association between smoking status of parents and the sex of child.  
-$H_{a}:$ The population proportion of boys born to smoking parents is different from the population proportion of boys born to nonsmoking parents. Or: There is no association between smoking status of parents and the sex of child.
+$H_{a}:$ The population proportion of boys born to smoking parents is different from the population proportion of boys born to nonsmoking parents. Or: There is an association between smoking status of parents and the sex of child.
 
 Our explanatory variable is the parent's smoking status and the response variable is the sex of the baby. Hopefully, this is fairly clear. What might not be so clear is the choice of sample statistic. When we dealt with single proportion problems our relevant statistic was the sample proportion (*p*); however, now that we have two proportions, our sample statistic is the difference between these two proportions:
 
@@ -67,7 +67,7 @@ sample_stat = (p_nonsmokers - p_smokers)[[1]]
 #For use later
 null_diff = 0
 ```
-The only new code here is the production of the stacked bar chart. I feed in our dataframe and use the **count()** function to group by the parent's smoking status and then by the baby's sex and count how many we have in each of these four categories (smokers/boy, smokers/girl,...). The rest of the bar chart code was taken from: https://www.r-graph-gallery.com/48-grouped-barplot-with-ggplot2.html. I won't explain it further because it's a lot of *R* black magic to me.
+The only new code here is the production of the stacked bar chart. I feed in our dataframe and used the **count()** function to group by the parent's smoking status and then by the baby's sex and count how many we have in each of these four categories (smokers/boy, smokers/girl,...). The rest of the bar chart code was taken from: https://www.r-graph-gallery.com/48-grouped-barplot-with-ggplot2.html. I won't explain it further because it's a lot of *R* black magic to me.
 
 So what can we take from the segmented bar chart? I seems to me that, in our sample, the proportion of boys is relatively close together for both status'. The proportion of boys from smoking parents is definitely higher but both proportion hover around 50%.
 
