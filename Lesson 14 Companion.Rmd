@@ -130,7 +130,7 @@ Let's take a look at the theory-based approach.
 
 ### Two-sample z-test:
 
-If we are going to put any trust into the p-value of our theory-based approach we better verify the validity conditions. For this test we need to have at least 10 observations in each group.
+If we are going to put any trust into the p-value of our theory-based approach we better verify the validity conditions. For this test we need to have at least 10 successes and 10 failures in each group.
 
 ```{r}
 smoking %>%
@@ -189,7 +189,7 @@ paste("(", lower, ",", upper, ")")
 ```
 Because we have positive values in our confidence interval we can interpret it by saying: babies born to nonsmoking parents are between 5.3% and 14.1% more likely (with 95% confidence) to be a boy than babies born to smoking parents. If we had negative values, we'd have to say they are less likely.
 
-This is a little different than the other interpretation we have learned (we are 95% confident that the true difference in proportion is between 5.3% and 14.1%): however, it provides much more clarity in what we have calculated.
+This is a little different than the other interpretation we have learned (we are 95% confident that the true difference in proportions is between 5.3% and 14.1%): however, it provides much more clarity in what we have calculated.
 
 ### Practical importance:
 We have a p-value that suggests there is a difference in the true proportion of boys born to nonsmokers and smokers. The confidence interval doesn't include zero and therefore agrees with this (not unexpectedly). Now we are faced with deciding if this result is practically important. Based on the lower value of 5.3%, I assess this result it practically important. Increasing the chances of a boy by more than 5% is a non-trivial difference. I don't think we would have picked up smoking but if you had offered me something that would increase my chances of having a girl after having three boys... I would taken it.
