@@ -14,9 +14,9 @@ I'm going to use the parent's smoking habit vs. baby's gender example for this d
 $H_{0}:$ The population proportion of boys born to smoking parents is the same as the population proportion of boys born to nonsmoking parents. Put simply: There is no association between smoking status of parents and the sex of child.  
 $H_{a}:$ The population proportion of boys born to smoking parents is different from the population proportion of boys born to nonsmoking parents. Or: There is an association between smoking status of parents and the sex of child.
 
-Our explanatory variable is the parent's smoking status and the response variable is the sex of the baby. Hopefully, this is fairly clear. What might not be so clear is the choice of sample statistic. When we dealt with single proportion problems our relevant statistic was the sample proportion (*p*); however, now that we have two proportions, our sample statistic is the difference between these two proportions:
+Our explanatory variable is the parent's smoking status and the response variable is the sex of the baby. Hopefully, this is fairly clear. What might not be so clear is the choice of sample statistic. When we dealt with single proportion problems our relevant statistic was the sample proportion ($\hat{p}$); however, now that we have two proportions, our sample statistic is the difference between these two proportions:
 
-$p_{nonsmoker} - p_{smoker}$
+$\hat{p}_{nonsmoker} - \hat{p}_{smoker}$
 
 Two things to keep track of:
 
