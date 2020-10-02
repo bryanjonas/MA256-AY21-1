@@ -168,7 +168,7 @@ z = (sample_stat - null_diff) / stand_error
 ```
 
 ```{r}
-2 * (1 - pnorm(abs(z[[1]]), mean = null_diff, sd = stand_error[[1]]))
+2 * (1 - pnorm(abs(sample_stat), mean = null_diff, sd = stand_error[[1]]))
 ```
 While the second approach looks much shorter, it uses some of the same values calculated in the first so it's really a matter of dropping the standardization and using *R*'s ability to calculate the area under a custom normal curve. The p-values calculated aren't numerically the same but they are practically the same for the purposes of judging evidence against the null hypothesis. It's clear that we still have very strong evidence against the null hypothesis.
 
