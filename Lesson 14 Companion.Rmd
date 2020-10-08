@@ -174,6 +174,17 @@ While the second approach looks much shorter, it uses some of the same values ca
 
 You will notice I used **[[1]]** several times in the code. This is kind of a time saving mechanism for me as I like to program in the code to pull the values I need. Doing this the way I have leaves me with a "list" for the values of **p_hat** and **stand_error** (and several other places). As what I really want are the first values in these lists, the **[[1]]** allows me to pull that first value out to use it. There is likely a better way to do this but this is what I've got right now.
 
+You can also use the built-in function **prop.test()**.  If you choose to use this function, however, it is vital that you "turn off" the continuity correction by including the parameter *correct = FALSE* inside the function. You will get the **incorrect** answer if you do not do this.
+
+```{r}
+prop.test(x = c(1975, 255), 
+          n = c(1975 + 1627, 255 + 310), 
+          alternative = "two.sided",
+          correct = FALSE)
+```
+As you can see from this example, **prop.test** expects a vector of the count of "successes" (number of boys this case) for each group in the *x* parameter and a total number of samples in the *n* parameter. I know it's atypical of me to hard-code numbers but I'm doing it here for sake of clarity.
+
+
 ### Confidence interval:
 We can compute a confidence interval for our population parameter ($\pi_{nonsmoker} - \pi_{smoker}$) as well.
 
