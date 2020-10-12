@@ -70,7 +70,7 @@ You will submit this document as many times as necessary in order to get your pr
 For this IPR, I'm interested in hearing about a few things:
 
 1. Your research question: Hopefully that's pretty self-explanatory.
-2. Background/Literature Review: I want you to find at least two **scholarly** articles concerning your topic. You will need to write a literature for your project paper but I just need bullet points for the IPR. Tell me what is already out there in the research about this topic (or closely related to it).
+2. Background/Literature Review: I want you to find at least two **scholarly** articles concerning your topic. You will need to write a literature review for your project paper but I just need bullet points for the IPR. Tell me what is already out there in the research about this topic (or closely related to it).
 3. Your data set: Where did you get it from? How was it collected? Observational unit? Any "modifications" you're going to have to make to use it?
 4. Data exploration: Show me some interesting things you found when exploring your data. You should be at the bi-variate analysis point here (maybe adding a color to show category). Plot your explanatory variables vs. the response and **analyze**. Pull out of a few interesting facts from the sample that may help inform further analysis. **No models at this point.**
 
