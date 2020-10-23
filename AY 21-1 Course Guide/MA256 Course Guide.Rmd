@@ -492,10 +492,19 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 ### After Class Activities:
 * Make any necessary modifications to your project plan based on feedback and/or information gleaned from other group's presentations.
 
+\newpage
+
+## Lesson 28: Continuous Distributions
+
+<!-- ### Objectives: -->
+
+<!-- ### Before Class Activities: -->
+
+<!-- ### After Class Activities: -->
 
 \newpage
 
-## Lesson 28: Writer's Workshop
+## Lesson 29: Writer's Workshop
 
 ### Objectives:
 * Allow students to gain the benefits of peer reviews of their writing
@@ -507,15 +516,6 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 ### After Class Activities:
 * Finalize course project report.
 
-\newpage
-
-## Lesson 29: Continuous Distributions
-
-<!-- ### Objectives: -->
-
-<!-- ### Before Class Activities: -->
-
-<!-- ### After Class Activities: -->
 \newpage
 
 ## Lesson 30: Course Project Presentations

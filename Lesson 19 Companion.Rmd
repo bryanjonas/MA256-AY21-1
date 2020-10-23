@@ -53,7 +53,7 @@ null_value = 0
 ```
 
 ### Data exploration:
-I'm going to so a little bit fancier with this data exploration to get a box plot of our values.
+I'm going to go a little bit fancier with this data exploration to get a box plot of our values.
 ```{r}
 m_m %>%
   mutate(Diff = Large - Small) %>%
