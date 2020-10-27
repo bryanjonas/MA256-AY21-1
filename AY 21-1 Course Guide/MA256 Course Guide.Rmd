@@ -531,7 +531,7 @@ probability distributions
 some common continuous probability distributions
 
 ### Before Class Activities:
-* Read: *Advanced Statistical Investigations With Probability* - Chapter 4.1 - 4.7
+* Read: *Advanced Statistical Investigations With Probability* - Chapter 5.1 - 5.7
 * Do: Complete and submit homework for this lesson available on Teams.
 
 ### After Class Activities:
