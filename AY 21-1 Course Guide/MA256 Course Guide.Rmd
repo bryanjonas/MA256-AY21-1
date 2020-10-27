@@ -480,7 +480,7 @@ This WPR will be released from academic security on 02 OCT 2020. You may not dis
 
 \newpage
 
-## Lesson 26: Discrete Disctributions
+## Lesson 26: Discrete Distributions
 * Determine probabilities from probability mass functions and the reverse
 * Determine probabilies and probability mass functions from cumulative distribution functions and the reverse
 * Calculate means and variances for discrete random variables
