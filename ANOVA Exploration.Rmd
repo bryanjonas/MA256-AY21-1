@@ -123,7 +123,7 @@ I know this is just a lot of work to verify the value that is already in the cha
 
 I think the first hurdle to discuss is perhaps we use the *mean* (*MSTr* and *MSE*) values as opposed to the *sum* (*SSTr* and *SSE*) values. Hopefully this isn't a big hurdle when you consider that we are trying to utilize a single statistic that gives us a snapshot of the variance between all groups. It's a similar sentiment for why we so often use mean to describe a quantitative measure in a sample. 
 
-Taking a step back, I've already discussed how taking the weighted difference of the average in that group and the overall average provides us with an idea of the total variance that is due to the groups (or explanatory variable). As far as *SSE* and *MSE* providing a measure of within-group variance, if that doesn't make sense, try removing the weighting ($n - 1$) from the equation. What you're left with is the variance of each group ($s^{s}$) as a measure of within-group variance. 
+Taking a step back, I've already discussed how taking the weighted difference of the average in that group and the overall average provides us with an idea of the total variance that is due to the groups (or explanatory variable). As far as *SSE* and *MSE* providing a measure of within-group variance, if that doesn't make sense, try removing the weighting ($n - 1$) from the equation. What you're left with is the variance of each group ($s^{2}$) as a measure of within-group variance. 
 
 Sometimes I know that a picture is worth all of my words so here is one I got from the interwebs to help you out.
 

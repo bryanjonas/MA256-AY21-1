@@ -10,7 +10,29 @@ knitr::opts_chunk$set(out.width= "70%", out.height= "70%", fig.align = "center")
 
 ### Research question:
 
-I'm going to use the "ambigious prose" example for this document. The research question in this example asks: is there an association between when a participant is shown a picture (cue condition) and their long-run recall score. To measure this researchers split their participants into three groups: one saw a picture before hearing the passage, one saw the picture after being read the passage, and the last didn't get to see the picture at all. A few hours later the participants were tested on their recall and that score was recorded in the data set. The hypothesis for our statistical test are as follows:  
+I'm going to use the "ambigious prose" example for this document. The research question in this example asks: is there an association between when a participant is shown a picture (cue condition) and their long-run recall score. To measure this researchers split their participants into three groups: one saw a picture before hearing the passage, one saw the picture after being read the passage, and the last didn't get to see the picture at all. A few hours later the participants were tested on their recall and that score was recorded in the data set. 
+
+### Data exploration:
+
+I think the logical choice to explore this data before analysis is a set of boxplots.
+
+```{r}
+library(tidyverse)
+
+recall = read_table2("http://www.isi-stats.com/isi/data/chap9/Recall.txt")
+
+head(recall)
+
+recall %>%
+  ggplot(aes(x = Condition, y = Recall, fill = Condition)) +
+  geom_boxplot() +
+  labs(title = "Recall Score vs. Condition")
+```
+It appears from this boxplot that the *Before* condition has the highest recall scores of all the conditions with *None* followed by *After*. This is a bit different than I would expected as I would have imagined that some picture was better than no picture at all. The *None* condition has the highest variance in scores with a range from 8 to 5 points.
+
+### Hypotheses:
+
+The hypothesis for our statistical test are as follows:  
 
 $H_{0}:$ There is no association between cue condition and recall score.  
 $H_{a}:$ There is an association between cue condition and recall score.
@@ -23,12 +45,6 @@ $H_{a}$: At least one $\mu$ is different.
 Here again, the chapter discusses two test statistics to utilize for analysis. We will concentrate on the *F*-statistic for this example. In the code below I'm using a concept that I've haven't used before in this class: defining my own function. You, obviously, could do all these calculations by hand (or use *R*'s built in function) but YOLO!
 
 ```{r}
-library(tidyverse)
-
-recall = read_table2("http://www.isi-stats.com/isi/data/chap9/Recall.txt")
-
-head(recall)
-
 #Define "between group variability" function
 b_g_v <- function(g_s, o_s, k){
   num = 0
@@ -72,21 +88,9 @@ with_grp_var = w_g_v(group_stats, overall_stats, k, sample_size)
 sample_f_stat = btwn_grp_var / with_grp_var
 ``` 
 
-### Data exploration:
-
-I think the logical choice to explore this data before analysis is a set of boxplots.
-
-```{r}
-recall %>%
-  ggplot(aes(x = Condition, y = Recall, fill = Condition)) +
-  geom_boxplot() +
-  labs(title = "Recall Score vs. Condition")
-```
-It appears from this boxplot that the *Before* condition has the highest recall scores of all the conditions with *None* followed by *After*. This is a bit different than I would expected as I would have imagined that some picture was better than no picture at all. The *None* condition has the highest variance in scores with a range from 8 to 5 points.
-
 ### Simulation-based approach:
 
-To build the null distribution here we are doing to reassign conditions to recall scores. This is a lot less involved than the simulations we've been doing in recent lessons.
+To build the null distribution here we are going to reassign conditions to recall scores. This is a lot less involved than the simulations we've been doing in recent lessons.
 
 ```{r}
 replications_dataframe = NULL
@@ -136,9 +140,9 @@ A p-value of 0 indicates we have very strong evidence against the null which sug
 
 ### Theory-based approach:
 
-The validity conditions for the theory-based approach as as follows:
-* Either the sample size is at least 20 for all groups, without strong skewness or outliers **OR** the distribution of the quantitative variable is approximately symmetric in all the samples. **AND**
-* The standard deviations of the samples are approximately equal to each other (the largest shouldn't be more than twice the smallest).
+The validity conditions for the theory-based approach as as follows:  
+* Either the sample size is at least 20 for all groups, without strong skewness or outliers **OR** the distribution of the quantitative variable is approximately symmetric in all the samples. **AND**  
+* The standard deviations of the samples are approximately equal to each other (the largest shouldn't be more than twice the smallest).  
 
 To check these conditions, we need to build a dotplot for each group.
 
@@ -156,7 +160,7 @@ recall %>%
   summarise(SD = sd(Recall))
 ```
 
-Now that we have met the validity conditions, let's see how well the F-distribution fits our simular null distribution. While not strictly a necessary step, I include it here for instructional purposes.
+Now that we have met the validity conditions, let's see how well the F-distribution fits our simulated null distribution. While not strictly a necessary step, I include it here for instructional purposes.
 
 ```{r}
 df_1 = k - 1
