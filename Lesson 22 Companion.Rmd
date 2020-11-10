@@ -148,9 +148,11 @@ To check these conditions, we need to build a dotplot for each group.
 
 ```{r}
 recall %>%
-  ggplot(aes(x = Recall, y = Condition, fill = Condition)) +
+  ggplot(aes(x = Recall, fill = Condition)) +
   geom_dotplot(position = "dodge") +
-  labs(title = "Distribution of Recall Scores by Group")
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) +
+  labs(y = "", title = "Distribution of Recall Scores by Group")
 ```
 As we don't fit the requirement for having a sample size of at least 20, we must ensure that our quantitative variable (*Recall*) is approximately symmetric in all samples. It appears that we meet that condition for these three groups. We can ensure we meet the second validity condition by calculating the standard deviation for each group.
 
