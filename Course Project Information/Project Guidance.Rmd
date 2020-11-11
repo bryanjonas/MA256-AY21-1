@@ -83,7 +83,7 @@ This IPR should represent our last touch-point before you finalize your project.
 
 1. You research question: Just to remind your audience.
 2. Your data set: Same idea, just a reminder.
-3. Your linear model: You're project will include **one** linear model that contains all of the explanatory variables you have decided need to be in the model. The terms in your model are there because they are part of your research question, represent confounding variables, or are significant interaction terms. 
+3. Your linear model: Your project will include **one** linear model that contains all of the explanatory variables you have decided need to be in the model. The terms in your model are there because they are part of your research question, represent confounding variables, or are significant interaction terms. 
 4. Your assessment of the validity conditions: This is important if you are going to make statistical inference from your sample data set.
 5. Anything else you feel is important!
 
